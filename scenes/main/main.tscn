@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="main" type="Node2D"]
+
+[node name="levels" type="Node2D" parent="."]
+
+[node name="text_layer" type="CanvasLayer" parent="."]
+
+[node name="hud_layer" type="CanvasLayer" parent="."]
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
