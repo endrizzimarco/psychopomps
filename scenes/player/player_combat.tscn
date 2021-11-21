@@ -6,8 +6,8 @@
 [ext_resource path="res://scenes/player/states/idle.gd" type="Script" id=4]
 [ext_resource path="res://scenes/player/states/dodge.gd" type="Script" id=5]
 [ext_resource path="res://assets/player/player_idle/player_idle0012.png" type="Texture" id=6]
-[ext_resource path="res://scenes/player/crouch.gd" type="Script" id=7]
-[ext_resource path="res://scenes/player/jump.gd" type="Script" id=8]
+[ext_resource path="res://scenes/player/states/crouch.gd" type="Script" id=7]
+[ext_resource path="res://scenes/player/states/jump.gd" type="Script" id=8]
 [ext_resource path="res://assets/player/player_idle/player_idle0010.png" type="Texture" id=9]
 [ext_resource path="res://assets/player/player_idle/player_idle0015.png" type="Texture" id=10]
 [ext_resource path="res://assets/player/player_idle/player_idle0011.png" type="Texture" id=11]
@@ -140,13 +140,18 @@
 [ext_resource path="res://assets/player/player_dash_right/player_dash_right0007.png" type="Texture" id=138]
 [ext_resource path="res://assets/player/player_dash_right/player_dash_right0009.png" type="Texture" id=139]
 [ext_resource path="res://assets/player/player_dash_right/spritesheet (1).png" type="Texture" id=140]
-[ext_resource path="res://scenes/player/scratches.tscn" type="PackedScene" id=141]
+[ext_resource path="res://scenes/player/sfx/scratches.tscn" type="PackedScene" id=141]
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 25 ), ExtResource( 14 ), ExtResource( 31 ), ExtResource( 17 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 15 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 34 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 19 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 13 ), ExtResource( 18 ), ExtResource( 38 ), ExtResource( 21 ), ExtResource( 1 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 32 ) ],
 "loop": true,
 "name": "idle",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ) ],
+"loop": false,
+"name": "crouch",
 "speed": 30.0
 }, {
 "frames": [  ],
@@ -157,11 +162,6 @@ animations = [ {
 "frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 39 ), ExtResource( 46 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 52 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 58 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 76 ), ExtResource( 86 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 111 ), ExtResource( 102 ), ExtResource( 77 ), ExtResource( 88 ), ExtResource( 115 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 119 ), ExtResource( 100 ), ExtResource( 106 ), ExtResource( 91 ), ExtResource( 75 ), ExtResource( 116 ), ExtResource( 87 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 72 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 69 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 99 ), ExtResource( 107 ), ExtResource( 112 ), ExtResource( 103 ), ExtResource( 78 ) ],
 "loop": true,
 "name": "crouch_idle",
-"speed": 30.0
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ) ],
-"loop": false,
-"name": "crouch",
 "speed": 30.0
 }, {
 "frames": [ ExtResource( 131 ), ExtResource( 132 ), ExtResource( 135 ), ExtResource( 134 ), ExtResource( 136 ), ExtResource( 133 ), ExtResource( 128 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 130 ) ],
@@ -185,14 +185,13 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 201.197, 162.721 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 83.8013, 157.601 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "crouch"
+[sub_resource type="Animation" id=4]
 length = 0.2
 step = 0.033
 tracks/0/type = "value"
@@ -220,7 +219,7 @@ tracks/1/keys = {
 "values": [ "crouch" ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=5]
 resource_name = "crouch_dash_left"
 length = 0.01
 tracks/0/type = "value"
@@ -262,7 +261,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=6]
 resource_name = "crouch_dash_right"
 length = 0.01
 tracks/0/type = "value"
@@ -304,7 +303,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=7]
 resource_name = "crouch_idle"
 tracks/0/type = "value"
 tracks/0/path = NodePath("player_sprites:animation")
@@ -319,7 +318,7 @@ tracks/0/keys = {
 "values": [ "crouch_idle" ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=8]
 resource_name = "dash_left"
 length = 0.3
 loop = true
@@ -336,7 +335,7 @@ tracks/0/keys = {
 "values": [ "dash_left" ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=9]
 resource_name = "dash_right"
 tracks/0/type = "value"
 tracks/0/path = NodePath("player_sprites:animation")
@@ -351,10 +350,9 @@ tracks/0/keys = {
 "values": [ "dash_right" ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "hit"
+[sub_resource type="Animation" id=10]
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=11]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -382,7 +380,7 @@ tracks/1/keys = {
 "values": [ "idle", "idle" ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=12]
 resource_name = "jump"
 length = 0.3
 step = 0.01
@@ -450,7 +448,7 @@ frame = 3
 [node name="player_sprites" type="AnimatedSprite" parent="."]
 position = Vector2( -272.85, -219.669 )
 scale = Vector2( 0.362152, 0.359842 )
-frames = SubResource( 8 )
+frames = SubResource( 1 )
 animation = "crouch"
 frame = 3
 playing = true
@@ -461,7 +459,7 @@ __meta__ = {
 [node name="collision" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2( -258.809, -229.028 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -472,21 +470,21 @@ position = Vector2( -274.401, -227.655 )
 [node name="hitbox_collision" type="CollisionShape2D" parent="hitbox"]
 position = Vector2( -3.57166, 21.8345 )
 scale = Vector2( 1, -0.6 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="animations" type="AnimationPlayer" parent="."]
 autoplay = "idle"
-anims/crouch = SubResource( 3 )
-anims/crouch_dash_left = SubResource( 12 )
-anims/crouch_dash_right = SubResource( 13 )
-anims/crouch_idle = SubResource( 9 )
-anims/dash_left = SubResource( 10 )
-anims/dash_right = SubResource( 11 )
-anims/hit = SubResource( 5 )
-anims/idle = SubResource( 6 )
+anims/crouch = SubResource( 4 )
+anims/crouch_dash_left = SubResource( 5 )
+anims/crouch_dash_right = SubResource( 6 )
+anims/crouch_idle = SubResource( 7 )
+anims/dash_left = SubResource( 8 )
+anims/dash_right = SubResource( 9 )
+anims/hit = SubResource( 10 )
+anims/idle = SubResource( 11 )
 
 [node name="scratches" parent="." instance=ExtResource( 141 )]
 position = Vector2( -805.119, -1291.29 )
@@ -508,7 +506,7 @@ script = ExtResource( 7 )
 script = ExtResource( 8 )
 
 [node name="jump_anim" type="AnimationPlayer" parent="states/jump"]
-anims/jump = SubResource( 14 )
+anims/jump = SubResource( 12 )
 
 [node name="parry" type="Node" parent="states"]
 script = ExtResource( 2 )
