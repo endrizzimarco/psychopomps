@@ -1,0 +1,526 @@
+[gd_scene load_steps=154 format=2]
+
+[ext_resource path="res://assets/player/player_idle/player_idle0026.png" type="Texture" id=1]
+[ext_resource path="res://scripts/state.gd" type="Script" id=2]
+[ext_resource path="res://scenes/player/player_combat.gd" type="Script" id=3]
+[ext_resource path="res://scenes/player/states/idle.gd" type="Script" id=4]
+[ext_resource path="res://scenes/player/states/dodge.gd" type="Script" id=5]
+[ext_resource path="res://assets/player/player_idle/player_idle0012.png" type="Texture" id=6]
+[ext_resource path="res://scenes/player/crouch.gd" type="Script" id=7]
+[ext_resource path="res://scenes/player/jump.gd" type="Script" id=8]
+[ext_resource path="res://assets/player/player_idle/player_idle0010.png" type="Texture" id=9]
+[ext_resource path="res://assets/player/player_idle/player_idle0015.png" type="Texture" id=10]
+[ext_resource path="res://assets/player/player_idle/player_idle0011.png" type="Texture" id=11]
+[ext_resource path="res://assets/player/player_idle/player_idle0014.png" type="Texture" id=12]
+[ext_resource path="res://assets/player/player_idle/player_idle0022.png" type="Texture" id=13]
+[ext_resource path="res://assets/player/player_idle/player_idle0001.png" type="Texture" id=14]
+[ext_resource path="res://assets/player/player_idle/player_idle0007.png" type="Texture" id=15]
+[ext_resource path="res://assets/player/player_idle/player_idle0019.png" type="Texture" id=16]
+[ext_resource path="res://assets/player/player_idle/player_idle0003.png" type="Texture" id=17]
+[ext_resource path="res://assets/player/player_idle/player_idle0023.png" type="Texture" id=18]
+[ext_resource path="res://assets/player/player_idle/player_idle0016.png" type="Texture" id=19]
+[ext_resource path="res://assets/player/player_idle/player_idle0021.png" type="Texture" id=20]
+[ext_resource path="res://assets/player/player_idle/player_idle0025.png" type="Texture" id=21]
+[ext_resource path="res://assets/player/player_idle/player_idle0027.png" type="Texture" id=22]
+[ext_resource path="res://assets/player/player_idle/player_idle0004.png" type="Texture" id=23]
+[ext_resource path="res://assets/player/player_idle/player_idle0005.png" type="Texture" id=24]
+[ext_resource path="res://assets/player/player_idle/player_idle0000.png" type="Texture" id=25]
+[ext_resource path="res://assets/player/player_idle/player_idle0020.png" type="Texture" id=26]
+[ext_resource path="res://assets/player/player_idle/player_idle0006.png" type="Texture" id=27]
+[ext_resource path="res://assets/player/player_idle/player_idle0028.png" type="Texture" id=28]
+[ext_resource path="res://assets/player/player_idle/player_idle0029.png" type="Texture" id=29]
+[ext_resource path="res://assets/player/player_idle/player_idle0030.png" type="Texture" id=30]
+[ext_resource path="res://assets/player/player_idle/player_idle0002.png" type="Texture" id=31]
+[ext_resource path="res://assets/player/player_idle/player_idle0031.png" type="Texture" id=32]
+[ext_resource path="res://assets/player/player_idle/player_idle0009.png" type="Texture" id=33]
+[ext_resource path="res://assets/player/player_idle/player_idle0013.png" type="Texture" id=34]
+[ext_resource path="res://assets/player/player_idle/player_idle0008.png" type="Texture" id=35]
+[ext_resource path="res://assets/player/player_idle/player_idle0017.png" type="Texture" id=36]
+[ext_resource path="res://assets/player/player_idle/player_idle0018.png" type="Texture" id=37]
+[ext_resource path="res://assets/player/player_idle/player_idle0024.png" type="Texture" id=38]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0002.png" type="Texture" id=39]
+[ext_resource path="res://assets/player/player_crouch/crouch/player_crouch0000.png" type="Texture" id=40]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0004.png" type="Texture" id=41]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0000.png" type="Texture" id=42]
+[ext_resource path="res://assets/player/player_crouch/crouch/player_crouch0001.png" type="Texture" id=43]
+[ext_resource path="res://assets/player/player_crouch/crouch/player_crouch0002.png" type="Texture" id=44]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0001.png" type="Texture" id=45]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0003.png" type="Texture" id=46]
+[ext_resource path="res://assets/player/player_crouch/crouch/player_crouch0003.png" type="Texture" id=47]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0005.png" type="Texture" id=48]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0007.png" type="Texture" id=49]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0008.png" type="Texture" id=50]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0006.png" type="Texture" id=51]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0009.png" type="Texture" id=52]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0012.png" type="Texture" id=53]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0018.png" type="Texture" id=54]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0019.png" type="Texture" id=55]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0011.png" type="Texture" id=56]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0013.png" type="Texture" id=57]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0015.png" type="Texture" id=58]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0010.png" type="Texture" id=59]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0014.png" type="Texture" id=60]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0016.png" type="Texture" id=61]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0017.png" type="Texture" id=62]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0023.png" type="Texture" id=63]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0022.png" type="Texture" id=64]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0020.png" type="Texture" id=65]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0021.png" type="Texture" id=66]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0046.png" type="Texture" id=67]
+[ext_resource path="res://assets/player/player_crouch/dash_left/player_crouch_dash_left0004.png" type="Texture" id=68]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0053.png" type="Texture" id=69]
+[ext_resource path="res://assets/player/player_crouch/dash_right/player_crouch_dash_right0001.png" type="Texture" id=70]
+[ext_resource path="res://assets/player/player_crouch/dash_right/player_crouch_dash_right0004.png" type="Texture" id=71]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0050.png" type="Texture" id=72]
+[ext_resource path="res://assets/player/player_crouch/dash_right/player_crouch_dash_right0007.png" type="Texture" id=73]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0047.png" type="Texture" id=74]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0043.png" type="Texture" id=75]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0026.png" type="Texture" id=76]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0032.png" type="Texture" id=77]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0060.png" type="Texture" id=78]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0028.png" type="Texture" id=79]
+[ext_resource path="res://assets/player/player_crouch/dash_left/player_crouch_dash_left0005.png" type="Texture" id=80]
+[ext_resource path="res://assets/player/player_crouch/dash_left/player_crouch_dash_left0002.png" type="Texture" id=81]
+[ext_resource path="res://assets/player/player_crouch/dash_left/player_crouch_dash_left0006.png" type="Texture" id=82]
+[ext_resource path="res://assets/player/player_crouch/dash_left/player_crouch_dash_left0003.png" type="Texture" id=83]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0029.png" type="Texture" id=84]
+[ext_resource path="res://assets/player/player_crouch/dash_left/player_crouch_dash_left0001.png" type="Texture" id=85]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0027.png" type="Texture" id=86]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0045.png" type="Texture" id=87]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0033.png" type="Texture" id=88]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0024.png" type="Texture" id=89]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0025.png" type="Texture" id=90]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0042.png" type="Texture" id=91]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0054.png" type="Texture" id=92]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0055.png" type="Texture" id=93]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0037.png" type="Texture" id=94]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0038.png" type="Texture" id=95]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0035.png" type="Texture" id=96]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0036.png" type="Texture" id=97]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0048.png" type="Texture" id=98]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0056.png" type="Texture" id=99]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0040.png" type="Texture" id=100]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0049.png" type="Texture" id=101]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0031.png" type="Texture" id=102]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0059.png" type="Texture" id=103]
+[ext_resource path="res://assets/player/player_crouch/dash_left/player_crouch_dash_left0000.png" type="Texture" id=104]
+[ext_resource path="res://assets/player/player_crouch/dash_right/player_crouch_dash_right0005.png" type="Texture" id=105]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0041.png" type="Texture" id=106]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0057.png" type="Texture" id=107]
+[ext_resource path="res://assets/player/player_crouch/dash_right/player_crouch_dash_right0003.png" type="Texture" id=108]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0051.png" type="Texture" id=109]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0052.png" type="Texture" id=110]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0030.png" type="Texture" id=111]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0058.png" type="Texture" id=112]
+[ext_resource path="res://assets/player/player_crouch/dash_left/player_crouch_dash_left0007.png" type="Texture" id=113]
+[ext_resource path="res://assets/player/player_crouch/dash_right/player_crouch_dash_right0000.png" type="Texture" id=114]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0034.png" type="Texture" id=115]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0044.png" type="Texture" id=116]
+[ext_resource path="res://assets/player/player_crouch/dash_right/player_crouch_dash_right0002.png" type="Texture" id=117]
+[ext_resource path="res://assets/player/player_crouch/dash_right/player_crouch_dash_right0006.png" type="Texture" id=118]
+[ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0039.png" type="Texture" id=119]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0004.png" type="Texture" id=120]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0006.png" type="Texture" id=121]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0005.png" type="Texture" id=122]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0003.png" type="Texture" id=123]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0007.png" type="Texture" id=124]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0008.png" type="Texture" id=125]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0000.png" type="Texture" id=126]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0001.png" type="Texture" id=127]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0006.png" type="Texture" id=128]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0002.png" type="Texture" id=129]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0009.png" type="Texture" id=130]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0000.png" type="Texture" id=131]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0001.png" type="Texture" id=132]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0005.png" type="Texture" id=133]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0003.png" type="Texture" id=134]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0002.png" type="Texture" id=135]
+[ext_resource path="res://assets/player/player_dash_left/player_dash_left0004.png" type="Texture" id=136]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0008.png" type="Texture" id=137]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0007.png" type="Texture" id=138]
+[ext_resource path="res://assets/player/player_dash_right/player_dash_right0009.png" type="Texture" id=139]
+[ext_resource path="res://assets/player/player_dash_right/spritesheet (1).png" type="Texture" id=140]
+[ext_resource path="res://scenes/player/scratches.tscn" type="PackedScene" id=141]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 14 ), ExtResource( 31 ), ExtResource( 17 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 15 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 34 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 19 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 13 ), ExtResource( 18 ), ExtResource( 38 ), ExtResource( 21 ), ExtResource( 1 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 32 ) ],
+"loop": true,
+"name": "idle",
+"speed": 30.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 39 ), ExtResource( 46 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 52 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 58 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 76 ), ExtResource( 86 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 111 ), ExtResource( 102 ), ExtResource( 77 ), ExtResource( 88 ), ExtResource( 115 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 119 ), ExtResource( 100 ), ExtResource( 106 ), ExtResource( 91 ), ExtResource( 75 ), ExtResource( 116 ), ExtResource( 87 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 72 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 69 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 99 ), ExtResource( 107 ), ExtResource( 112 ), ExtResource( 103 ), ExtResource( 78 ) ],
+"loop": true,
+"name": "crouch_idle",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ) ],
+"loop": false,
+"name": "crouch",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 131 ), ExtResource( 132 ), ExtResource( 135 ), ExtResource( 134 ), ExtResource( 136 ), ExtResource( 133 ), ExtResource( 128 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 130 ) ],
+"loop": false,
+"name": "dash_left",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 126 ), ExtResource( 127 ), ExtResource( 129 ), ExtResource( 123 ), ExtResource( 120 ), ExtResource( 122 ), ExtResource( 121 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ) ],
+"loop": false,
+"name": "dash_right",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 114 ), ExtResource( 70 ), ExtResource( 117 ), ExtResource( 108 ), ExtResource( 71 ), ExtResource( 105 ), ExtResource( 118 ), ExtResource( 73 ) ],
+"loop": false,
+"name": "crouch_dash_right",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 104 ), ExtResource( 85 ), ExtResource( 81 ), ExtResource( 83 ), ExtResource( 68 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 113 ) ],
+"loop": false,
+"name": "crouch_dash_left",
+"speed": 30.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 201.197, 162.721 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 83.8013, 157.601 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "crouch"
+length = 0.2
+step = 0.033
+tracks/0/type = "value"
+tracks/0/path = NodePath("hitbox/hitbox_collision:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, -0.6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("player_sprites:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "crouch" ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "crouch_dash_left"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("player_sprites:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "crouch_dash_left" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("scratches:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 205, -175 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("scratches")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "scratch_left"
+} ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "crouch_dash_right"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("player_sprites:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "crouch_dash_right" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("scratches:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -790, -175 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("scratches")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "scratch_right"
+} ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "crouch_idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath("player_sprites:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "crouch_idle" ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "dash_left"
+length = 0.3
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("player_sprites:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "dash_left" ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "dash_right"
+tracks/0/type = "value"
+tracks/0/path = NodePath("player_sprites:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "dash_right" ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "hit"
+
+[sub_resource type="Animation" id=6]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("hitbox/hitbox_collision:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("player_sprites:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "idle", "idle" ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "jump"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../..:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3 ),
+"transitions": PoolRealArray( 0.435275, 3.73214, 1.05816 ),
+"update": 0,
+"values": [ 1100.0, 800.0, 1100.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../jumping:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.015, 0.03, 0.045, 0.06, 0.075, 0.09, 0.105, 0.12, 0.135, 0.15, 0.165, 0.18, 0.195, 0.21, 0.225, 0.24, 0.255, 0.27, 0.285 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../player_sprites:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../jumping:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="player_combat" type="KinematicBody2D"]
+position = Vector2( 1252.52, 1100 )
+script = ExtResource( 3 )
+
+[node name="jumping" type="Sprite" parent="."]
+visible = false
+position = Vector2( -272.778, -211.374 )
+scale = Vector2( 0.353021, 0.290274 )
+texture = ExtResource( 140 )
+hframes = 11
+frame = 3
+
+[node name="player_sprites" type="AnimatedSprite" parent="."]
+position = Vector2( -272.85, -219.669 )
+scale = Vector2( 0.362152, 0.359842 )
+frames = SubResource( 8 )
+animation = "crouch"
+frame = 3
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -258.809, -229.028 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hitbox" type="Area2D" parent="."]
+position = Vector2( -274.401, -227.655 )
+
+[node name="hitbox_collision" type="CollisionShape2D" parent="hitbox"]
+position = Vector2( -3.57166, 21.8345 )
+scale = Vector2( 1, -0.6 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="animations" type="AnimationPlayer" parent="."]
+autoplay = "idle"
+anims/crouch = SubResource( 3 )
+anims/crouch_dash_left = SubResource( 12 )
+anims/crouch_dash_right = SubResource( 13 )
+anims/crouch_idle = SubResource( 9 )
+anims/dash_left = SubResource( 10 )
+anims/dash_right = SubResource( 11 )
+anims/hit = SubResource( 5 )
+anims/idle = SubResource( 6 )
+
+[node name="scratches" parent="." instance=ExtResource( 141 )]
+position = Vector2( -805.119, -1291.29 )
+
+[node name="states" type="Node" parent="."]
+
+[node name="idle" type="Node" parent="states"]
+script = ExtResource( 4 )
+
+[node name="dodge" type="Node" parent="states"]
+script = ExtResource( 5 )
+
+[node name="Tween" type="Tween" parent="states/dodge"]
+
+[node name="crouch" type="Node" parent="states"]
+script = ExtResource( 7 )
+
+[node name="jump" type="Node" parent="states"]
+script = ExtResource( 8 )
+
+[node name="jump_anim" type="AnimationPlayer" parent="states/jump"]
+anims/jump = SubResource( 14 )
+
+[node name="parry" type="Node" parent="states"]
+script = ExtResource( 2 )
+
+[node name="light_attack" type="Node" parent="states"]
+script = ExtResource( 2 )
+
+[node name="heavy_attack" type="Node" parent="states"]
+script = ExtResource( 2 )
+
+[node name="hit" type="Node" parent="states"]
+script = ExtResource( 2 )
+
+[node name="dead" type="Node" parent="states"]
+script = ExtResource( 2 )
