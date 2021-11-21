@@ -1,0 +1,2 @@
+i want scratches to apear where guy touches the ground
+i want them to stay there a bit after you regain control of charcter then slowly lower opacity until they disapear

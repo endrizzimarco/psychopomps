@@ -1,0 +1,2 @@
+-when in the air just stay on last frame
+-when landing play frames in reverse
