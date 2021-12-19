@@ -1,4 +1,4 @@
-[gd_scene load_steps=154 format=2]
+[gd_scene load_steps=164 format=2]
 
 [ext_resource path="res://assets/player/player_idle/player_idle0026.png" type="Texture" id=1]
 [ext_resource path="res://scripts/state.gd" type="Script" id=2]
@@ -139,8 +139,19 @@
 [ext_resource path="res://assets/player/player_dash_right/player_dash_right0008.png" type="Texture" id=137]
 [ext_resource path="res://assets/player/player_dash_right/player_dash_right0007.png" type="Texture" id=138]
 [ext_resource path="res://assets/player/player_dash_right/player_dash_right0009.png" type="Texture" id=139]
-[ext_resource path="res://assets/player/player_dash_right/spritesheet (1).png" type="Texture" id=140]
+[ext_resource path="res://assets/player/player_jump/player_jump0008.png" type="Texture" id=140]
 [ext_resource path="res://scenes/player/sfx/scratches.tscn" type="PackedScene" id=141]
+[ext_resource path="res://assets/player/player_jump/player_jump0009.png" type="Texture" id=142]
+[ext_resource path="res://assets/player/player_jump/player_jump0010.png" type="Texture" id=143]
+[ext_resource path="res://assets/player/player_jump/player_jump0007.png" type="Texture" id=144]
+[ext_resource path="res://assets/player/player_jump/player_jump0005.png" type="Texture" id=145]
+[ext_resource path="res://assets/player/player_jump/player_jump0003.png" type="Texture" id=146]
+[ext_resource path="res://assets/player/player_jump/player_jump0001.png" type="Texture" id=147]
+[ext_resource path="res://assets/player/player_jump/player_jump0002.png" type="Texture" id=148]
+[ext_resource path="res://assets/player/player_jump/player_jump0000.png" type="Texture" id=149]
+[ext_resource path="res://assets/player/player_jump/player_jump0004.png" type="Texture" id=150]
+[ext_resource path="res://assets/player/player_jump/player_jump0006.png" type="Texture" id=151]
+[ext_resource path="res://scenes/playerjump.tres" type="Animation" id=152]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -182,6 +193,11 @@ animations = [ {
 "frames": [ ExtResource( 104 ), ExtResource( 85 ), ExtResource( 81 ), ExtResource( 83 ), ExtResource( 68 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 113 ) ],
 "loop": false,
 "name": "crouch_dash_left",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 149 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 145 ), ExtResource( 151 ), ExtResource( 144 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 143 ) ],
+"loop": false,
+"name": "jumping",
 "speed": 30.0
 } ]
 
@@ -374,84 +390,34 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ "idle", "idle" ]
-}
-
-[sub_resource type="Animation" id=12]
-resource_name = "jump"
-length = 0.3
-step = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("../..:position:y")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3 ),
-"transitions": PoolRealArray( 0.435275, 3.73214, 1.05816 ),
-"update": 0,
-"values": [ 1100.0, 800.0, 1100.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../../jumping:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.015, 0.03, 0.045, 0.06, 0.075, 0.09, 0.105, 0.12, 0.135, 0.15, 0.165, 0.18, 0.195, 0.21, 0.225, 0.24, 0.255, 0.27, 0.285 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 ]
+"values": [ "idle" ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../../player_sprites:visible")
+tracks/2/path = NodePath("player_sprites:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false, true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../../jumping:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
+"values": [ true ]
 }
 
 [node name="player_combat" type="KinematicBody2D"]
 position = Vector2( 1252.52, 1100 )
 script = ExtResource( 3 )
 
-[node name="jumping" type="Sprite" parent="."]
-visible = false
-position = Vector2( -272.778, -211.374 )
-scale = Vector2( 0.353021, 0.290274 )
-texture = ExtResource( 140 )
-hframes = 11
-frame = 3
-
 [node name="player_sprites" type="AnimatedSprite" parent="."]
 position = Vector2( -272.85, -219.669 )
 scale = Vector2( 0.362152, 0.359842 )
 frames = SubResource( 1 )
-animation = "crouch"
-frame = 3
-playing = true
+animation = "jumping"
+frame = 1
 __meta__ = {
 "_edit_lock_": true
 }
@@ -485,6 +451,8 @@ anims/dash_left = SubResource( 8 )
 anims/dash_right = SubResource( 9 )
 anims/hit = SubResource( 10 )
 anims/idle = SubResource( 11 )
+anims/jump = ExtResource( 152 )
+anims/playerjump = ExtResource( 152 )
 
 [node name="scratches" parent="." instance=ExtResource( 141 )]
 position = Vector2( -805.119, -1291.29 )
@@ -506,7 +474,7 @@ script = ExtResource( 7 )
 script = ExtResource( 8 )
 
 [node name="jump_anim" type="AnimationPlayer" parent="states/jump"]
-anims/jump = SubResource( 12 )
+anims/jump = ExtResource( 152 )
 
 [node name="parry" type="Node" parent="states"]
 script = ExtResource( 2 )
