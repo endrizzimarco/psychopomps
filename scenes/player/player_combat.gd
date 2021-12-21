@@ -39,3 +39,8 @@ func can_dodge() -> bool:
 	   self.dash_dir == "right":
 		return false
 	return true
+
+
+func _on_hurtbox_area_entered(_area):
+	if fsm.state_nxt == fsm.states.idle:
+		fsm.state_nxt = fsm.states.hit

@@ -1,0 +1,104 @@
+[gd_scene load_steps=69 format=2]
+
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0026.png" type="Texture" id=1]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0027.png" type="Texture" id=2]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0024.png" type="Texture" id=3]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0034.png" type="Texture" id=4]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0032.png" type="Texture" id=5]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0028.png" type="Texture" id=6]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0029.png" type="Texture" id=7]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0037.png" type="Texture" id=8]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0039.png" type="Texture" id=9]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0035.png" type="Texture" id=10]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0036.png" type="Texture" id=11]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0033.png" type="Texture" id=12]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0038.png" type="Texture" id=13]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0031.png" type="Texture" id=14]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0040.png" type="Texture" id=15]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0030.png" type="Texture" id=16]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0025.png" type="Texture" id=17]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0010.png" type="Texture" id=18]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0016.png" type="Texture" id=19]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0017.png" type="Texture" id=20]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0019.png" type="Texture" id=21]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0013.png" type="Texture" id=22]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0008.png" type="Texture" id=23]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0007.png" type="Texture" id=24]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0021.png" type="Texture" id=25]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0023.png" type="Texture" id=26]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0011.png" type="Texture" id=27]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0009.png" type="Texture" id=28]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0018.png" type="Texture" id=29]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0014.png" type="Texture" id=30]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0015.png" type="Texture" id=31]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0020.png" type="Texture" id=32]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0022.png" type="Texture" id=33]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0012.png" type="Texture" id=34]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0003.png" type="Texture" id=35]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0005.png" type="Texture" id=36]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0006.png" type="Texture" id=37]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0001.png" type="Texture" id=38]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0004.png" type="Texture" id=39]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0000.png" type="Texture" id=40]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0002.png" type="Texture" id=41]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0049.png" type="Texture" id=42]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0052.png" type="Texture" id=43]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0056.png" type="Texture" id=44]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0063.png" type="Texture" id=45]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0042.png" type="Texture" id=46]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0048.png" type="Texture" id=47]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0055.png" type="Texture" id=48]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0047.png" type="Texture" id=49]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0044.png" type="Texture" id=50]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0064.png" type="Texture" id=51]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0060.png" type="Texture" id=52]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0057.png" type="Texture" id=53]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0050.png" type="Texture" id=54]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0046.png" type="Texture" id=55]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0041.png" type="Texture" id=56]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0061.png" type="Texture" id=57]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0062.png" type="Texture" id=58]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0045.png" type="Texture" id=59]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0051.png" type="Texture" id=60]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0059.png" type="Texture" id=61]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0058.png" type="Texture" id=62]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0043.png" type="Texture" id=63]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0053.png" type="Texture" id=64]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0054.png" type="Texture" id=65]
+[ext_resource path="res://scenes/bosses/boss_1/phase_1/phase_1.gd" type="Script" id=66]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 136.5, 398.25 )
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 40 ), ExtResource( 38 ), ExtResource( 41 ), ExtResource( 35 ), ExtResource( 39 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 18 ), ExtResource( 27 ), ExtResource( 34 ), ExtResource( 22 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 29 ), ExtResource( 21 ), ExtResource( 32 ), ExtResource( 25 ), ExtResource( 33 ), ExtResource( 26 ), ExtResource( 3 ), ExtResource( 17 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 15 ), ExtResource( 56 ), ExtResource( 46 ), ExtResource( 63 ), ExtResource( 50 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 49 ), ExtResource( 47 ), ExtResource( 42 ), ExtResource( 54 ), ExtResource( 60 ), ExtResource( 43 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 48 ), ExtResource( 44 ), ExtResource( 53 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 52 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 45 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "arm_atk_face",
+"speed": 30.0
+} ]
+
+[node name="phase_1" type="KinematicBody2D"]
+script = ExtResource( 66 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -9, -31 )
+shape = SubResource( 2 )
+
+[node name="animations" type="AnimatedSprite" parent="."]
+position = Vector2( 62, 3 )
+scale = Vector2( 0.75463, 0.764895 )
+frames = SubResource( 1 )
+animation = "arm_atk_face"
+frame = 38
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="hurtbox" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2( -43, 65.5 )
+shape = SubResource( 2 )
