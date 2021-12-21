@@ -1,4 +1,4 @@
-[gd_scene load_steps=164 format=2]
+[gd_scene load_steps=212 format=2]
 
 [ext_resource path="res://assets/player/player_idle/player_idle0026.png" type="Texture" id=1]
 [ext_resource path="res://scripts/state.gd" type="Script" id=2]
@@ -151,7 +151,51 @@
 [ext_resource path="res://assets/player/player_jump/player_jump0000.png" type="Texture" id=149]
 [ext_resource path="res://assets/player/player_jump/player_jump0004.png" type="Texture" id=150]
 [ext_resource path="res://assets/player/player_jump/player_jump0006.png" type="Texture" id=151]
-[ext_resource path="res://scenes/playerjump.tres" type="Animation" id=152]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0003.png" type="Texture" id=152]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0004.png" type="Texture" id=153]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0005.png" type="Texture" id=154]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0006.png" type="Texture" id=155]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0000.png" type="Texture" id=156]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0002.png" type="Texture" id=157]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0001.png" type="Texture" id=158]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0007.png" type="Texture" id=159]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0002.png" type="Texture" id=160]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0008.png" type="Texture" id=161]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0003.png" type="Texture" id=162]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0005.png" type="Texture" id=163]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0008.png" type="Texture" id=164]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0009.png" type="Texture" id=165]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0010.png" type="Texture" id=166]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0012.png" type="Texture" id=167]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0001.png" type="Texture" id=168]
+[ext_resource path="res://assets/player/light_attack/player_light_attack0011.png" type="Texture" id=169]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0004.png" type="Texture" id=170]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0006.png" type="Texture" id=171]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0007.png" type="Texture" id=172]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0009.png" type="Texture" id=173]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0010.png" type="Texture" id=174]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0011.png" type="Texture" id=175]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0012.png" type="Texture" id=176]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0016.png" type="Texture" id=177]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0017.png" type="Texture" id=178]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0013.png" type="Texture" id=179]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0030.png" type="Texture" id=180]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0025.png" type="Texture" id=181]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0028.png" type="Texture" id=182]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0027.png" type="Texture" id=183]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0024.png" type="Texture" id=184]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0020.png" type="Texture" id=185]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0018.png" type="Texture" id=186]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0029.png" type="Texture" id=187]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0019.png" type="Texture" id=188]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0026.png" type="Texture" id=189]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0022.png" type="Texture" id=190]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0015.png" type="Texture" id=191]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0021.png" type="Texture" id=192]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0023.png" type="Texture" id=193]
+[ext_resource path="res://assets/player/heavy_attack/player_heavy_attack0014.png" type="Texture" id=194]
+[ext_resource path="res://scenes/player/light_atk.gd" type="Script" id=195]
+[ext_resource path="res://scenes/player/heavy_atk.gd" type="Script" id=196]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -160,24 +204,14 @@ animations = [ {
 "name": "idle",
 "speed": 30.0
 }, {
+"frames": [ ExtResource( 149 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 145 ), ExtResource( 151 ), ExtResource( 144 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 143 ), ExtResource( 142 ), ExtResource( 140 ), ExtResource( 144 ), ExtResource( 151 ), ExtResource( 145 ), ExtResource( 150 ), ExtResource( 146 ), ExtResource( 148 ), ExtResource( 147 ), ExtResource( 149 ) ],
+"loop": false,
+"name": "jump",
+"speed": 60.0
+}, {
 "frames": [ ExtResource( 40 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ) ],
 "loop": false,
 "name": "crouch",
-"speed": 30.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "New Anim",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 39 ), ExtResource( 46 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 52 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 58 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 76 ), ExtResource( 86 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 111 ), ExtResource( 102 ), ExtResource( 77 ), ExtResource( 88 ), ExtResource( 115 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 119 ), ExtResource( 100 ), ExtResource( 106 ), ExtResource( 91 ), ExtResource( 75 ), ExtResource( 116 ), ExtResource( 87 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 72 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 69 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 99 ), ExtResource( 107 ), ExtResource( 112 ), ExtResource( 103 ), ExtResource( 78 ) ],
-"loop": true,
-"name": "crouch_idle",
-"speed": 30.0
-}, {
-"frames": [ ExtResource( 131 ), ExtResource( 132 ), ExtResource( 135 ), ExtResource( 134 ), ExtResource( 136 ), ExtResource( 133 ), ExtResource( 128 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 130 ) ],
-"loop": false,
-"name": "dash_left",
 "speed": 30.0
 }, {
 "frames": [ ExtResource( 126 ), ExtResource( 127 ), ExtResource( 129 ), ExtResource( 123 ), ExtResource( 120 ), ExtResource( 122 ), ExtResource( 121 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ) ],
@@ -185,9 +219,9 @@ animations = [ {
 "name": "dash_right",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 114 ), ExtResource( 70 ), ExtResource( 117 ), ExtResource( 108 ), ExtResource( 71 ), ExtResource( 105 ), ExtResource( 118 ), ExtResource( 73 ) ],
-"loop": false,
-"name": "crouch_dash_right",
+"frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 39 ), ExtResource( 46 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 52 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 58 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 76 ), ExtResource( 86 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 111 ), ExtResource( 102 ), ExtResource( 77 ), ExtResource( 88 ), ExtResource( 115 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 119 ), ExtResource( 100 ), ExtResource( 106 ), ExtResource( 91 ), ExtResource( 75 ), ExtResource( 116 ), ExtResource( 87 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 72 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 69 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 99 ), ExtResource( 107 ), ExtResource( 112 ), ExtResource( 103 ), ExtResource( 78 ) ],
+"loop": true,
+"name": "crouch_idle",
 "speed": 30.0
 }, {
 "frames": [ ExtResource( 104 ), ExtResource( 85 ), ExtResource( 81 ), ExtResource( 83 ), ExtResource( 68 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 113 ) ],
@@ -195,10 +229,25 @@ animations = [ {
 "name": "crouch_dash_left",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 149 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 145 ), ExtResource( 151 ), ExtResource( 144 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 143 ) ],
+"frames": [ ExtResource( 114 ), ExtResource( 70 ), ExtResource( 117 ), ExtResource( 108 ), ExtResource( 71 ), ExtResource( 105 ), ExtResource( 118 ), ExtResource( 73 ) ],
 "loop": false,
-"name": "jumping",
+"name": "crouch_dash_right",
 "speed": 30.0
+}, {
+"frames": [ ExtResource( 131 ), ExtResource( 132 ), ExtResource( 135 ), ExtResource( 134 ), ExtResource( 136 ), ExtResource( 133 ), ExtResource( 128 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 130 ) ],
+"loop": false,
+"name": "dash_left",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 168 ), ExtResource( 160 ), ExtResource( 162 ), ExtResource( 170 ), ExtResource( 163 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 161 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 179 ), ExtResource( 194 ), ExtResource( 191 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 186 ), ExtResource( 188 ), ExtResource( 185 ), ExtResource( 192 ), ExtResource( 190 ), ExtResource( 193 ), ExtResource( 184 ), ExtResource( 181 ), ExtResource( 189 ), ExtResource( 183 ), ExtResource( 182 ), ExtResource( 187 ), ExtResource( 180 ) ],
+"loop": false,
+"name": "heavy_atk",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 156 ), ExtResource( 158 ), ExtResource( 157 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 159 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 169 ), ExtResource( 167 ) ],
+"loop": false,
+"name": "light_atk",
+"speed": 60.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -206,6 +255,21 @@ extents = Vector2( 201.197, 162.721 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 83.8013, 157.601 )
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("player_sprites:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "dash_left" ]
+}
 
 [sub_resource type="Animation" id=4]
 length = 0.2
@@ -366,6 +430,21 @@ tracks/0/keys = {
 "values": [ "dash_right" ]
 }
 
+[sub_resource type="Animation" id=15]
+resource_name = "heavy_atk"
+tracks/0/type = "value"
+tracks/0/path = NodePath("player_sprites:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "heavy_atk" ]
+}
+
 [sub_resource type="Animation" id=10]
 
 [sub_resource type="Animation" id=11]
@@ -408,6 +487,51 @@ tracks/2/keys = {
 "values": [ true ]
 }
 
+[sub_resource type="Animation" id=12]
+resource_name = "jump"
+length = 0.3
+step = 0.015
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3 ),
+"transitions": PoolRealArray( 0.435, 3.73, 1 ),
+"update": 0,
+"values": [ 1100.0, 800.0, 1100.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("player_sprites:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "jump" ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "light_atk"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("player_sprites:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "light_atk" ]
+}
+
 [node name="player_combat" type="KinematicBody2D"]
 position = Vector2( 1252.52, 1100 )
 script = ExtResource( 3 )
@@ -416,8 +540,8 @@ script = ExtResource( 3 )
 position = Vector2( -272.85, -219.669 )
 scale = Vector2( 0.362152, 0.359842 )
 frames = SubResource( 1 )
-animation = "jumping"
-frame = 1
+animation = "dash_left"
+playing = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -443,19 +567,21 @@ __meta__ = {
 
 [node name="animations" type="AnimationPlayer" parent="."]
 autoplay = "idle"
+anims/RESET = SubResource( 13 )
 anims/crouch = SubResource( 4 )
 anims/crouch_dash_left = SubResource( 5 )
 anims/crouch_dash_right = SubResource( 6 )
 anims/crouch_idle = SubResource( 7 )
 anims/dash_left = SubResource( 8 )
 anims/dash_right = SubResource( 9 )
+anims/heavy_atk = SubResource( 15 )
 anims/hit = SubResource( 10 )
 anims/idle = SubResource( 11 )
-anims/jump = ExtResource( 152 )
-anims/playerjump = ExtResource( 152 )
+anims/jump = SubResource( 12 )
+anims/light_atk = SubResource( 14 )
 
 [node name="scratches" parent="." instance=ExtResource( 141 )]
-position = Vector2( -805.119, -1291.29 )
+position = Vector2( -790, -1300 )
 
 [node name="states" type="Node" parent="."]
 
@@ -473,17 +599,14 @@ script = ExtResource( 7 )
 [node name="jump" type="Node" parent="states"]
 script = ExtResource( 8 )
 
-[node name="jump_anim" type="AnimationPlayer" parent="states/jump"]
-anims/jump = ExtResource( 152 )
-
 [node name="parry" type="Node" parent="states"]
 script = ExtResource( 2 )
 
-[node name="light_attack" type="Node" parent="states"]
-script = ExtResource( 2 )
+[node name="light_atk" type="Node" parent="states"]
+script = ExtResource( 195 )
 
-[node name="heavy_attack" type="Node" parent="states"]
-script = ExtResource( 2 )
+[node name="heavy_atk" type="Node" parent="states"]
+script = ExtResource( 196 )
 
 [node name="hit" type="Node" parent="states"]
 script = ExtResource( 2 )

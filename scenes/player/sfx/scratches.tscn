@@ -86,10 +86,10 @@ tracks/2/keys = {
 }
 
 [node name="scratches" type="Sprite"]
-modulate = Color( 1, 1, 1, 0.75 )
 self_modulate = Color( 0.419608, 0.223529, 0.223529, 1 )
 scale = Vector2( 1.16261, 0.916125 )
 texture = ExtResource( 1 )
+flip_h = true
 hframes = 2
 frame = 1
 script = ExtResource( 2 )
