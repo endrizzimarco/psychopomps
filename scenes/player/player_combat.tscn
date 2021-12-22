@@ -217,11 +217,6 @@ animations = [ {
 "name": "crouch",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 168 ), ExtResource( 160 ), ExtResource( 162 ), ExtResource( 170 ), ExtResource( 163 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 161 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 179 ), ExtResource( 194 ), ExtResource( 191 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 186 ), ExtResource( 188 ), ExtResource( 185 ), ExtResource( 192 ), ExtResource( 190 ), ExtResource( 193 ), ExtResource( 184 ), ExtResource( 181 ), ExtResource( 189 ), ExtResource( 183 ), ExtResource( 182 ), ExtResource( 187 ), ExtResource( 180 ) ],
-"loop": false,
-"name": "heavy_atk",
-"speed": 30.0
-}, {
 "frames": [ ExtResource( 149 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 145 ), ExtResource( 151 ), ExtResource( 144 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 143 ), ExtResource( 142 ), ExtResource( 140 ), ExtResource( 144 ), ExtResource( 151 ), ExtResource( 145 ), ExtResource( 150 ), ExtResource( 146 ), ExtResource( 148 ), ExtResource( 147 ), ExtResource( 149 ) ],
 "loop": false,
 "name": "jump",
@@ -232,9 +227,9 @@ animations = [ {
 "name": "light_atk",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 126 ), ExtResource( 127 ), ExtResource( 129 ), ExtResource( 123 ), ExtResource( 120 ), ExtResource( 122 ), ExtResource( 121 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ) ],
+"frames": [ ExtResource( 168 ), ExtResource( 160 ), ExtResource( 162 ), ExtResource( 170 ), ExtResource( 163 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 161 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 179 ), ExtResource( 194 ), ExtResource( 191 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 186 ), ExtResource( 188 ), ExtResource( 185 ), ExtResource( 192 ), ExtResource( 190 ), ExtResource( 193 ), ExtResource( 184 ), ExtResource( 181 ), ExtResource( 189 ), ExtResource( 183 ), ExtResource( 182 ), ExtResource( 187 ), ExtResource( 180 ) ],
 "loop": false,
-"name": "dash_right",
+"name": "heavy_atk",
 "speed": 30.0
 }, {
 "frames": [ ExtResource( 201 ), ExtResource( 204 ), ExtResource( 203 ), ExtResource( 202 ), ExtResource( 199 ), ExtResource( 198 ), ExtResource( 200 ) ],
@@ -242,24 +237,29 @@ animations = [ {
 "name": "hit",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 114 ), ExtResource( 70 ), ExtResource( 117 ), ExtResource( 108 ), ExtResource( 71 ), ExtResource( 105 ), ExtResource( 118 ), ExtResource( 73 ) ],
-"loop": false,
-"name": "crouch_dash_right",
-"speed": 30.0
-}, {
-"frames": [ ExtResource( 104 ), ExtResource( 85 ), ExtResource( 81 ), ExtResource( 83 ), ExtResource( 68 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 113 ) ],
-"loop": false,
-"name": "crouch_dash_left",
-"speed": 30.0
-}, {
 "frames": [ ExtResource( 42 ), ExtResource( 45 ), ExtResource( 39 ), ExtResource( 46 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 52 ), ExtResource( 59 ), ExtResource( 56 ), ExtResource( 53 ), ExtResource( 57 ), ExtResource( 60 ), ExtResource( 58 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 76 ), ExtResource( 86 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 111 ), ExtResource( 102 ), ExtResource( 77 ), ExtResource( 88 ), ExtResource( 115 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 119 ), ExtResource( 100 ), ExtResource( 106 ), ExtResource( 91 ), ExtResource( 75 ), ExtResource( 116 ), ExtResource( 87 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 98 ), ExtResource( 101 ), ExtResource( 72 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 69 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 99 ), ExtResource( 107 ), ExtResource( 112 ), ExtResource( 103 ), ExtResource( 78 ) ],
 "loop": true,
 "name": "crouch_idle",
 "speed": 30.0
 }, {
+"frames": [ ExtResource( 114 ), ExtResource( 70 ), ExtResource( 117 ), ExtResource( 108 ), ExtResource( 71 ), ExtResource( 105 ), ExtResource( 118 ), ExtResource( 73 ) ],
+"loop": false,
+"name": "crouch_dash_right",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 126 ), ExtResource( 127 ), ExtResource( 129 ), ExtResource( 123 ), ExtResource( 120 ), ExtResource( 122 ), ExtResource( 121 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ) ],
+"loop": false,
+"name": "dash_right",
+"speed": 30.0
+}, {
 "frames": [ ExtResource( 131 ), ExtResource( 132 ), ExtResource( 135 ), ExtResource( 134 ), ExtResource( 136 ), ExtResource( 133 ), ExtResource( 128 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 130 ) ],
 "loop": false,
 "name": "dash_left",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 104 ), ExtResource( 85 ), ExtResource( 81 ), ExtResource( 83 ), ExtResource( 68 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 113 ) ],
+"loop": false,
+"name": "crouch_dash_left",
 "speed": 30.0
 } ]
 
@@ -592,6 +592,7 @@ position = Vector2( -272.85, -219.669 )
 scale = Vector2( 0.362152, 0.359842 )
 frames = SubResource( 1 )
 animation = "dash_left"
+frame = 9
 playing = true
 __meta__ = {
 "_edit_lock_": true

@@ -90,7 +90,7 @@ position = Vector2( 62, 3 )
 scale = Vector2( 0.75463, 0.764895 )
 frames = SubResource( 1 )
 animation = "arm_atk_face"
-frame = 38
+frame = 64
 playing = true
 __meta__ = {
 "_edit_lock_": true

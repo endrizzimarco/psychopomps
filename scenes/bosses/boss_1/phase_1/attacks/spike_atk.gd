@@ -1,18 +1,17 @@
-extends AnimatedSprite
+extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$anim.play('spike_center')
+	rng.randomize()
+	var randint = rng.randi_range(0, 2)
+	$anim.play(str(randint))
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if not $anim.current_animation:
 		queue_free()
 
