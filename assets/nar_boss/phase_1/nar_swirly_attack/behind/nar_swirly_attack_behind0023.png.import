@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nar_swirly_attack_behind0023.png-9fc4a028ee41cad93a6336f12d62edbc.stex"
+path.s3tc="res://.import/nar_swirly_attack_behind0023.png-9fc4a028ee41cad93a6336f12d62edbc.s3tc.stex"
+path.etc2="res://.import/nar_swirly_attack_behind0023.png-9fc4a028ee41cad93a6336f12d62edbc.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/nar_boss/phase_1/nar_swirly_attack/behind/nar_swirly_attack_behind0023.png"
-dest_files=[ "res://.import/nar_swirly_attack_behind0023.png-9fc4a028ee41cad93a6336f12d62edbc.stex" ]
+dest_files=[ "res://.import/nar_swirly_attack_behind0023.png-9fc4a028ee41cad93a6336f12d62edbc.s3tc.stex", "res://.import/nar_swirly_attack_behind0023.png-9fc4a028ee41cad93a6336f12d62edbc.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

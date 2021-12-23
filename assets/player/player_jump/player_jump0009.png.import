@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_jump0009.png-db25f4c3f8c75d1159c2f7c5b1cb06ee.stex"
+path.s3tc="res://.import/player_jump0009.png-db25f4c3f8c75d1159c2f7c5b1cb06ee.s3tc.stex"
+path.etc2="res://.import/player_jump0009.png-db25f4c3f8c75d1159c2f7c5b1cb06ee.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/player/player_jump/player_jump0009.png"
-dest_files=[ "res://.import/player_jump0009.png-db25f4c3f8c75d1159c2f7c5b1cb06ee.stex" ]
+dest_files=[ "res://.import/player_jump0009.png-db25f4c3f8c75d1159c2f7c5b1cb06ee.s3tc.stex", "res://.import/player_jump0009.png-db25f4c3f8c75d1159c2f7c5b1cb06ee.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

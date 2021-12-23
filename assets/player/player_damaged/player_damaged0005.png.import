@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_damaged0005.png-2876a4ca73b3cb26722629d79ff9aa90.stex"
+path.s3tc="res://.import/player_damaged0005.png-2876a4ca73b3cb26722629d79ff9aa90.s3tc.stex"
+path.etc2="res://.import/player_damaged0005.png-2876a4ca73b3cb26722629d79ff9aa90.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/player/player_damaged/player_damaged0005.png"
-dest_files=[ "res://.import/player_damaged0005.png-2876a4ca73b3cb26722629d79ff9aa90.stex" ]
+dest_files=[ "res://.import/player_damaged0005.png-2876a4ca73b3cb26722629d79ff9aa90.s3tc.stex", "res://.import/player_damaged0005.png-2876a4ca73b3cb26722629d79ff9aa90.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nar_idle_reflection0065.png-ef4a21f8bfcd313b8c95afc0ff088e0b.stex"
+path.s3tc="res://.import/nar_idle_reflection0065.png-ef4a21f8bfcd313b8c95afc0ff088e0b.s3tc.stex"
+path.etc2="res://.import/nar_idle_reflection0065.png-ef4a21f8bfcd313b8c95afc0ff088e0b.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/nar_boss/phase_1/nar_idle/reflection/nar_idle_reflection0065.png"
-dest_files=[ "res://.import/nar_idle_reflection0065.png-ef4a21f8bfcd313b8c95afc0ff088e0b.stex" ]
+dest_files=[ "res://.import/nar_idle_reflection0065.png-ef4a21f8bfcd313b8c95afc0ff088e0b.s3tc.stex", "res://.import/nar_idle_reflection0065.png-ef4a21f8bfcd313b8c95afc0ff088e0b.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

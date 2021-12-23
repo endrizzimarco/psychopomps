@@ -70,85 +70,73 @@
 [sub_resource type="Animation" id=14]
 resource_name = "0"
 length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("../spike_left/anim_left:current_animation")
+tracks/0/type = "animation"
+tracks/0/path = NodePath("../spike_left/anim_left")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "spike_left" ]
+"clips": PoolStringArray( "spike_left" ),
+"times": PoolRealArray( 0 )
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("anim_center:current_animation")
+tracks/1/type = "animation"
+tracks/1/path = NodePath("anim_center")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "spike_center" ]
+"clips": PoolStringArray( "spike_center" ),
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=15]
 resource_name = "1"
 length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("../spike_left/anim_left:current_animation")
+tracks/0/type = "animation"
+tracks/0/path = NodePath("../spike_left/anim_left")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "spike_left" ]
+"clips": PoolStringArray( "spike_left" ),
+"times": PoolRealArray( 0 )
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("../spike_right/anim_right:current_animation")
+tracks/1/type = "animation"
+tracks/1/path = NodePath("../spike_right/anim_right")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "spike_right" ]
+"clips": PoolStringArray( "spike_right" ),
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=5]
 resource_name = "2"
 length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("anim_center:current_animation")
+tracks/0/type = "animation"
+tracks/0/path = NodePath("anim_center")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "spike_center" ]
+"clips": PoolStringArray( "spike_center" ),
+"times": PoolRealArray( 0 )
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("../spike_right/anim_right:current_animation")
+tracks/1/type = "animation"
+tracks/1/path = NodePath("../spike_right/anim_right")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "spike_right" ]
+"clips": PoolStringArray( "spike_right" ),
+"times": PoolRealArray( 0 )
 }
 
 [sub_resource type="Animation" id=6]
@@ -407,7 +395,7 @@ anims/RESET = SubResource( 6 )
 
 [node name="spike_left" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( -750, 305 )
+position = Vector2( 211.26, 700.25 )
 scale = Vector2( 0.474, 0.35 )
 frames = SubResource( 9 )
 animation = "left"
@@ -429,7 +417,7 @@ anims/spike_left = SubResource( 17 )
 
 [node name="spike_center" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 30, 301 )
+position = Vector2( 991.26, 696.25 )
 scale = Vector2( 0.473864, 0.35 )
 frames = SubResource( 1 )
 animation = "center"
@@ -450,7 +438,7 @@ disabled = true
 
 [node name="spike_right" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 734, 296 )
+position = Vector2( 1695.26, 691.25 )
 scale = Vector2( 0.516376, 0.367824 )
 frames = SubResource( 12 )
 animation = "right"

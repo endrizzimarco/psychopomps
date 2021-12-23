@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_idle0023.png-4c9c5c0c88bbf7964fd1f4e5bd6f7987.stex"
+path.s3tc="res://.import/player_idle0023.png-4c9c5c0c88bbf7964fd1f4e5bd6f7987.s3tc.stex"
+path.etc2="res://.import/player_idle0023.png-4c9c5c0c88bbf7964fd1f4e5bd6f7987.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/player/player_idle/player_idle0023.png"
-dest_files=[ "res://.import/player_idle0023.png-4c9c5c0c88bbf7964fd1f4e5bd6f7987.stex" ]
+dest_files=[ "res://.import/player_idle0023.png-4c9c5c0c88bbf7964fd1f4e5bd6f7987.s3tc.stex", "res://.import/player_idle0023.png-4c9c5c0c88bbf7964fd1f4e5bd6f7987.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

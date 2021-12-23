@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nar_arm_attack_low0036.png-8541bd10dfa88f7ca4a3803c9d8e025b.stex"
+path.s3tc="res://.import/nar_arm_attack_low0036.png-8541bd10dfa88f7ca4a3803c9d8e025b.s3tc.stex"
+path.etc2="res://.import/nar_arm_attack_low0036.png-8541bd10dfa88f7ca4a3803c9d8e025b.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/nar_boss/phase_1/nar_arm_attack/low/nar_arm_attack_low0036.png"
-dest_files=[ "res://.import/nar_arm_attack_low0036.png-8541bd10dfa88f7ca4a3803c9d8e025b.stex" ]
+dest_files=[ "res://.import/nar_arm_attack_low0036.png-8541bd10dfa88f7ca4a3803c9d8e025b.s3tc.stex", "res://.import/nar_arm_attack_low0036.png-8541bd10dfa88f7ca4a3803c9d8e025b.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

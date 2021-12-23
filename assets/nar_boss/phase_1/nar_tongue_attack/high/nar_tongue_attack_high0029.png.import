@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nar_tongue_attack_high0029.png-9d32aaaf19073b932b1b89b7d0d16b0f.stex"
+path.s3tc="res://.import/nar_tongue_attack_high0029.png-9d32aaaf19073b932b1b89b7d0d16b0f.s3tc.stex"
+path.etc2="res://.import/nar_tongue_attack_high0029.png-9d32aaaf19073b932b1b89b7d0d16b0f.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0029.png"
-dest_files=[ "res://.import/nar_tongue_attack_high0029.png-9d32aaaf19073b932b1b89b7d0d16b0f.stex" ]
+dest_files=[ "res://.import/nar_tongue_attack_high0029.png-9d32aaaf19073b932b1b89b7d0d16b0f.s3tc.stex", "res://.import/nar_tongue_attack_high0029.png-9d32aaaf19073b932b1b89b7d0d16b0f.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

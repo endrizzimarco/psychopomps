@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_crouch_idle0037.png-a71a3ba477dcf0b9103bbb9776bf3209.stex"
+path.s3tc="res://.import/player_crouch_idle0037.png-a71a3ba477dcf0b9103bbb9776bf3209.s3tc.stex"
+path.etc2="res://.import/player_crouch_idle0037.png-a71a3ba477dcf0b9103bbb9776bf3209.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/player/player_crouch/idle/player_crouch_idle0037.png"
-dest_files=[ "res://.import/player_crouch_idle0037.png-a71a3ba477dcf0b9103bbb9776bf3209.stex" ]
+dest_files=[ "res://.import/player_crouch_idle0037.png-a71a3ba477dcf0b9103bbb9776bf3209.s3tc.stex", "res://.import/player_crouch_idle0037.png-a71a3ba477dcf0b9103bbb9776bf3209.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

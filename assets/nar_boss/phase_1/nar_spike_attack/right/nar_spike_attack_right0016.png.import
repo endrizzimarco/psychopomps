@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nar_spike_attack_right0016.png-47963c98dd7959a8c94d7dde4a9d02f1.stex"
+path.s3tc="res://.import/nar_spike_attack_right0016.png-47963c98dd7959a8c94d7dde4a9d02f1.s3tc.stex"
+path.etc2="res://.import/nar_spike_attack_right0016.png-47963c98dd7959a8c94d7dde4a9d02f1.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/nar_boss/phase_1/nar_spike_attack/right/nar_spike_attack_right0016.png"
-dest_files=[ "res://.import/nar_spike_attack_right0016.png-47963c98dd7959a8c94d7dde4a9d02f1.stex" ]
+dest_files=[ "res://.import/nar_spike_attack_right0016.png-47963c98dd7959a8c94d7dde4a9d02f1.s3tc.stex", "res://.import/nar_spike_attack_right0016.png-47963c98dd7959a8c94d7dde4a9d02f1.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

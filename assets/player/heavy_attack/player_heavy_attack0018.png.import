@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_heavy_attack0018.png-1ba29f974742c94b4718ad63e3d61af8.stex"
+path.s3tc="res://.import/player_heavy_attack0018.png-1ba29f974742c94b4718ad63e3d61af8.s3tc.stex"
+path.etc2="res://.import/player_heavy_attack0018.png-1ba29f974742c94b4718ad63e3d61af8.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/player/heavy_attack/player_heavy_attack0018.png"
-dest_files=[ "res://.import/player_heavy_attack0018.png-1ba29f974742c94b4718ad63e3d61af8.stex" ]
+dest_files=[ "res://.import/player_heavy_attack0018.png-1ba29f974742c94b4718ad63e3d61af8.s3tc.stex", "res://.import/player_heavy_attack0018.png-1ba29f974742c94b4718ad63e3d61af8.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -6,6 +6,5 @@
 [node name="boss_1" type="Node2D"]
 
 [node name="phase_1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 984, 360 )
 
 [node name="player_combat" parent="." instance=ExtResource( 2 )]

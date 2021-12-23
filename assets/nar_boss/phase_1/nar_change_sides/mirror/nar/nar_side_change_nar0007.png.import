@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/nar_side_change_nar0007.png-a46067c67af82ddf0ad50ba5d859e479.stex"
+path.s3tc="res://.import/nar_side_change_nar0007.png-a46067c67af82ddf0ad50ba5d859e479.s3tc.stex"
+path.etc2="res://.import/nar_side_change_nar0007.png-a46067c67af82ddf0ad50ba5d859e479.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/nar_boss/phase_1/nar_change_sides/mirror/nar/nar_side_change_nar0007.png"
-dest_files=[ "res://.import/nar_side_change_nar0007.png-a46067c67af82ddf0ad50ba5d859e479.stex" ]
+dest_files=[ "res://.import/nar_side_change_nar0007.png-a46067c67af82ddf0ad50ba5d859e479.s3tc.stex", "res://.import/nar_side_change_nar0007.png-a46067c67af82ddf0ad50ba5d859e479.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

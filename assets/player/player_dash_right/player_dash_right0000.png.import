@@ -2,19 +2,21 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_dash_right0000.png-a6acfb1497133430f4c115926e085297.stex"
+path.s3tc="res://.import/player_dash_right0000.png-a6acfb1497133430f4c115926e085297.s3tc.stex"
+path.etc2="res://.import/player_dash_right0000.png-a6acfb1497133430f4c115926e085297.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/player/player_dash_right/player_dash_right0000.png"
-dest_files=[ "res://.import/player_dash_right0000.png-a6acfb1497133430f4c115926e085297.stex" ]
+dest_files=[ "res://.import/player_dash_right0000.png-a6acfb1497133430f4c115926e085297.s3tc.stex", "res://.import/player_dash_right0000.png-a6acfb1497133430f4c115926e085297.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
