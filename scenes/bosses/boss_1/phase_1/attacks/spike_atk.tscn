@@ -139,7 +139,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 30 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 24 ), ExtResource( 36 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 23 ), ExtResource( 29 ), ExtResource( 37 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 25 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 54 ), ExtResource( 65 ) ],
 "loop": true,
@@ -147,11 +147,48 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 268.5, 705.25 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=6]
 resource_name = "spike_left"
+length = 1.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.45, 0.55, 0.65, 0.75, 0.8, 0.85, 0.95, 1.05, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.85, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "center",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=8]
+resource_name = "spike_center"
 length = 1.5
 step = 0.05
 tracks/0/type = "value"
@@ -181,50 +218,13 @@ tracks/1/keys = {
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "center",
-"speed": 5.0
-} ]
-
-[sub_resource type="Animation" id=10]
-resource_name = "spike_center"
-length = 1.5
-step = 0.05
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.45, 0.55, 0.65, 0.75, 0.8, 0.85, 0.95, 1.05, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("hitbox/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0.85, 1.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-
-[sub_resource type="SpriteFrames" id=11]
-animations = [ {
 "frames": [ ExtResource( 51 ), ExtResource( 59 ), ExtResource( 45 ), ExtResource( 48 ), ExtResource( 46 ), ExtResource( 57 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 44 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 53 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 62 ), ExtResource( 43 ), ExtResource( 60 ), ExtResource( 47 ), ExtResource( 50 ), ExtResource( 61 ) ],
 "loop": true,
 "name": "right",
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=10]
 resource_name = "spike_right"
 length = 1.5
 step = 0.05
@@ -269,7 +269,7 @@ anims/2 = SubResource( 3 )
 [node name="spike_left" type="AnimatedSprite" parent="."]
 position = Vector2( 211.26, 700.25 )
 scale = Vector2( 0.474, 0.35 )
-frames = SubResource( 5 )
+frames = SubResource( 4 )
 animation = "left"
 frame = 21
 __meta__ = {
@@ -281,16 +281,16 @@ position = Vector2( 42, 312 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spike_left/hitbox"]
 position = Vector2( 2.3038, 13.7142 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 disabled = true
 
 [node name="anim_left" type="AnimationPlayer" parent="spike_left"]
-anims/spike_left = SubResource( 8 )
+anims/spike_left = SubResource( 6 )
 
 [node name="spike_center" type="AnimatedSprite" parent="."]
 position = Vector2( 991.26, 696.25 )
 scale = Vector2( 0.473864, 0.35 )
-frames = SubResource( 9 )
+frames = SubResource( 7 )
 animation = "center"
 frame = 21
 __meta__ = {
@@ -298,19 +298,19 @@ __meta__ = {
 }
 
 [node name="anim_center" type="AnimationPlayer" parent="spike_center"]
-anims/spike_center = SubResource( 10 )
+anims/spike_center = SubResource( 8 )
 
 [node name="hitbox" type="Area2D" parent="spike_center"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spike_center/hitbox"]
 position = Vector2( -60, 377.25 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 disabled = true
 
 [node name="spike_right" type="AnimatedSprite" parent="."]
 position = Vector2( 1695.26, 691.25 )
 scale = Vector2( 0.516376, 0.367824 )
-frames = SubResource( 11 )
+frames = SubResource( 9 )
 animation = "right"
 frame = 20
 __meta__ = {
@@ -318,11 +318,11 @@ __meta__ = {
 }
 
 [node name="anim_right" type="AnimationPlayer" parent="spike_right"]
-anims/spike_right = SubResource( 12 )
+anims/spike_right = SubResource( 10 )
 
 [node name="hitbox" type="Area2D" parent="spike_right"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spike_right/hitbox"]
 position = Vector2( -60, 377.25 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 disabled = true

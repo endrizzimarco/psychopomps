@@ -526,8 +526,8 @@ script = ExtResource( 142 )
 position = Vector2( 969, 545 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-animation = "low"
-frame = 2
+animation = "high"
+flip_h = true
 
 [node name="anim" type="AnimationPlayer" parent="."]
 anims/0 = SubResource( 2 )
@@ -539,7 +539,6 @@ anims/RESET = SubResource( 6 )
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2( 1130.87, 663.076 )
-scale = Vector2( 1.13005, 2.7399 )
+position = Vector2( 675, 676 )
+scale = Vector2( 2, 1 )
 shape = SubResource( 7 )
-disabled = true

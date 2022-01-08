@@ -1,4 +1,4 @@
-[gd_scene load_steps=191 format=2]
+[gd_scene load_steps=208 format=2]
 
 [ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/nar/nar_side_change_nar0000.png" type="Texture" id=1]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/nar/nar_side_change_nar0001.png" type="Texture" id=2]
@@ -13,7 +13,23 @@
 [ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/nar/nar_side_change_nar0002.png" type="Texture" id=11]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/nar/nar_side_change_nar0003.png" type="Texture" id=12]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/nar/nar_side_change_nar0008.png" type="Texture" id=13]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0002.png" type="Texture" id=14]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0000.png" type="Texture" id=15]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0007.png" type="Texture" id=16]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0012.png" type="Texture" id=17]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0001.png" type="Texture" id=18]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0010.png" type="Texture" id=19]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0003.png" type="Texture" id=20]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0004.png" type="Texture" id=21]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0009.png" type="Texture" id=22]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0011.png" type="Texture" id=23]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0007.png" type="Texture" id=24]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0015.png" type="Texture" id=25]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0005.png" type="Texture" id=26]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0014.png" type="Texture" id=27]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0008.png" type="Texture" id=28]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0006.png" type="Texture" id=29]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_change_sides/mirror/mirror/nar_side_change_mirror0013.png" type="Texture" id=30]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_arm_attack/face/nar_arm_attack_face0006.png" type="Texture" id=37]
 [ext_resource path="res://scenes/bosses/boss_1/phase_1/phase_1.gd" type="Script" id=66]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_idle/mirror 20fps/nar_idle_mirror0001.png" type="Texture" id=67]
@@ -182,9 +198,38 @@
 [ext_resource path="res://assets/nar_boss/phase_1/nar_idle/ripple 20fps/nar_idle_ripple0003.png" type="Texture" id=230]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_idle/head/nar_idle_head.png" type="Texture" id=231]
 
+[sub_resource type="Animation" id=11]
+resource_name = "pattern_1"
+length = 9.0
+loop = true
+tracks/0/type = "animation"
+tracks/0/path = NodePath("atk_anim")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "arm_atk", "spike_atk", "tongue_atk" ),
+"times": PoolRealArray( 0, 2.4, 5.9 )
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_change_side"
+} ]
+}
+
 [sub_resource type="Animation" id=1]
 resource_name = "arm_atk"
-length = 2.5
+length = 3.0
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -208,54 +253,185 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 2.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
+"update": 0,
 "values": [ "arm_atk", "reflection" ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "change_sides"
-step = 0.033
+[sub_resource type="Animation" id=2]
+resource_name = "change_side"
+length = 0.633333
+step = 0.0333333
 tracks/0/type = "value"
-tracks/0/path = NodePath("boss/head/body:animation")
-tracks/0/interp = 1
+tracks/0/path = NodePath("boss/body:frame")
+tracks/0/interp = 0
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "change_side" ]
+"times": PoolRealArray( 0.033, 0.066, 0.1, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.4, 0.433333, 0.466667, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("boss/head/body:playing")
-tracks/1/interp = 1
+tracks/1/path = NodePath("boss/body:flip_h")
+tracks/1/interp = 0
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"times": PoolRealArray( 0, 0.533333, 0.566667 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 2,
+"values": [ false, false, true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("boss/head/body:frame")
-tracks/2/interp = 1
+tracks/2/path = NodePath("boss/body:playing")
+tracks/2/interp = 0
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.066, 0.165, 0.231, 0.297, 0.363, 0.429, 0.495, 0.561, 0.627, 0.693, 0.759 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.0333333, 0.533333, 0.566667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 2,
+"values": [ true, false, false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("boss/body:animation")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.533333, 0.566667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 2,
+"values": [ "idle", "change_side", "change_side", "idle" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mirror/reflection:flip_h")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.0333333, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 2,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mirror/reflection:visible")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.6, 0.633333 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 2,
+"values": [ true, false, false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("mirror/reflection:position")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.633333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 2,
+"values": [ Vector2( 901.468, -410.432 ), Vector2( -905.654, -446.342 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("mirror:frame")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.366667, 0.4, 0.433333, 0.466667, 0.5, 0.533333 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 13, 14 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("mirror:flip_h")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.6, 0.633333 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 2,
+"values": [ false, false, true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("mirror:playing")
+tracks/9/interp = 0
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.6, 0.633333 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 2,
+"values": [ true, false, false, true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("mirror:animation")
+tracks/10/interp = 0
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.6, 0.633333 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 2,
+"values": [ "mirror_idle", "mirror_change", "mirror_change", "mirror_idle" ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("boss/body/head:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.0333334, 0.533333, 0.566667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 2,
+"values": [ true, false, false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("boss/body/head:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.566667 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
+"values": [ Vector2( -86.9281, -570.478 ), Vector2( 110.838, -556.352 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("boss/body/head:flip_h")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0.0333333, 0.533333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "spike_atk"
+[sub_resource type="Animation" id=4]
 length = 3.5
-loop = true
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -277,10 +453,9 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=5]
 resource_name = "tongue_atk"
 length = 2.0
-loop = true
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
 tracks/0/interp = 1
@@ -296,15 +471,20 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 68 ), ExtResource( 67 ), ExtResource( 69 ), ExtResource( 73 ), ExtResource( 72 ), ExtResource( 70 ), ExtResource( 78 ), ExtResource( 77 ), ExtResource( 71 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 76 ) ],
 "loop": true,
-"name": "idle",
+"name": "mirror_idle",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 18 ), ExtResource( 14 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 16 ), ExtResource( 28 ), ExtResource( 22 ), ExtResource( 19 ), ExtResource( 23 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 27 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "mirror_change",
+"speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 37 ), ExtResource( 24 ) ],
 "loop": true,
@@ -317,18 +497,10 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[sub_resource type="SpriteFrames" id=5]
-animations = [ {
-"frames": [ ExtResource( 222 ), ExtResource( 221 ), ExtResource( 219 ), ExtResource( 230 ), ExtResource( 227 ), ExtResource( 229 ), ExtResource( 225 ), ExtResource( 224 ), ExtResource( 226 ), ExtResource( 223 ), ExtResource( 228 ), ExtResource( 220 ) ],
-"loop": true,
-"name": "ripple",
-"speed": 20.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 228.757, 462.146 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ ExtResource( 168 ), ExtResource( 169 ), ExtResource( 201 ), ExtResource( 180 ), ExtResource( 171 ), ExtResource( 177 ), ExtResource( 194 ), ExtResource( 200 ), ExtResource( 186 ), ExtResource( 202 ), ExtResource( 195 ), ExtResource( 203 ), ExtResource( 170 ), ExtResource( 210 ), ExtResource( 204 ), ExtResource( 212 ), ExtResource( 189 ), ExtResource( 196 ), ExtResource( 205 ), ExtResource( 199 ), ExtResource( 206 ), ExtResource( 172 ), ExtResource( 178 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 209 ), ExtResource( 183 ), ExtResource( 173 ), ExtResource( 192 ), ExtResource( 174 ), ExtResource( 211 ), ExtResource( 185 ), ExtResource( 175 ), ExtResource( 197 ), ExtResource( 176 ), ExtResource( 179 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 184 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 193 ), ExtResource( 198 ), ExtResource( 213 ), ExtResource( 214 ), ExtResource( 218 ), ExtResource( 215 ), ExtResource( 217 ), ExtResource( 216 ), ExtResource( 162 ), ExtResource( 160 ), ExtResource( 163 ), ExtResource( 165 ), ExtResource( 159 ), ExtResource( 166 ), ExtResource( 164 ), ExtResource( 161 ), ExtResource( 167 ) ],
 "loop": true,
@@ -336,44 +508,49 @@ animations = [ {
 "speed": 30.0
 }, {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ) ],
-"loop": true,
+"loop": false,
 "name": "change_side",
 "speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 222 ), ExtResource( 221 ), ExtResource( 219 ), ExtResource( 230 ), ExtResource( 227 ), ExtResource( 229 ), ExtResource( 225 ), ExtResource( 224 ), ExtResource( 226 ), ExtResource( 223 ), ExtResource( 228 ), ExtResource( 220 ) ],
+"loop": true,
+"name": "ripple",
+"speed": 20.0
 } ]
 
 [node name="phase_1" type="Node2D"]
 script = ExtResource( 66 )
 
+[node name="atk_master" type="AnimationPlayer" parent="."]
+anims/pattern_1 = SubResource( 11 )
+
 [node name="atk_anim" type="AnimationPlayer" parent="."]
 anims/arm_atk = SubResource( 1 )
-anims/change_sides = SubResource( 9 )
-anims/spike_atk = SubResource( 2 )
-anims/tongue_atk = SubResource( 8 )
+anims/change_side = SubResource( 2 )
+anims/spike_atk = SubResource( 4 )
+anims/tongue_atk = SubResource( 5 )
 
 [node name="mirror" type="AnimatedSprite" parent="."]
-position = Vector2( 1222, 474 )
-scale = Vector2( 0.45, 0.45 )
-frames = SubResource( 3 )
-animation = "idle"
-frame = 9
+position = Vector2( 966.428, 500.986 )
+scale = Vector2( 0.469016, 0.472047 )
+z_index = -2
+frames = SubResource( 6 )
+animation = "mirror_idle"
+frame = 10
 playing = true
 __meta__ = {
-"_edit_group_": true
+"_edit_lock_": true
 }
 
 [node name="reflection" type="AnimatedSprite" parent="mirror"]
-position = Vector2( 504.444, -517.778 )
-frames = SubResource( 4 )
+position = Vector2( 901.468, -410.432 )
+scale = Vector2( 1.07733, 1.05549 )
+frames = SubResource( 7 )
 animation = "reflection"
-frame = 11
-playing = true
-
-[node name="ripple" type="AnimatedSprite" parent="mirror"]
-position = Vector2( -437.778, 508.889 )
-scale = Vector2( 1.33761, 1.33333 )
-frames = SubResource( 5 )
-animation = "ripple"
-frame = 7
+frame = 31
 playing = true
 
 [node name="boss" type="KinematicBody2D" parent="."]
@@ -381,7 +558,7 @@ playing = true
 [node name="hitbox" type="CollisionShape2D" parent="boss"]
 visible = false
 position = Vector2( 1074, 355.801 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="hurtbox" type="Area2D" parent="boss"]
 visible = false
@@ -390,17 +567,32 @@ scale = Vector2( 0.795092, 0.784421 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boss/hurtbox"]
 position = Vector2( 1367.6, 339.874 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
-[node name="head" type="Sprite" parent="boss"]
-position = Vector2( 1023, 88 )
+[node name="body" type="AnimatedSprite" parent="boss"]
+position = Vector2( 1021.59, 433.3 )
 scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 231 )
-flip_h = true
-
-[node name="body" type="AnimatedSprite" parent="boss/head"]
-position = Vector2( 98.3334, 553.333 )
-frames = SubResource( 7 )
+frames = SubResource( 9 )
 animation = "idle"
-frame = 42
+frame = 11
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="head" type="Sprite" parent="boss/body"]
+position = Vector2( -99.1494, -573.151 )
+z_index = -1
+texture = ExtResource( 231 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ripple" type="AnimatedSprite" parent="boss/body"]
+position = Vector2( 39.65, 446.69 )
+scale = Vector2( 1.05904, 0.868271 )
+z_index = -1
+frames = SubResource( 10 )
+animation = "ripple"
+frame = 9
 playing = true

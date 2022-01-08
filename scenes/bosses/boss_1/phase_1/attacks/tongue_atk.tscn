@@ -84,7 +84,7 @@
 [ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0040.png" type="Texture" id=125]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0039.png" type="Texture" id=126]
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=1]
 resource_name = "all_random"
 length = 1.6
 tracks/0/type = "method"
@@ -130,7 +130,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 83 ), ExtResource( 86 ), ExtResource( 109 ), ExtResource( 93 ), ExtResource( 76 ), ExtResource( 103 ), ExtResource( 106 ), ExtResource( 95 ), ExtResource( 104 ), ExtResource( 101 ), ExtResource( 80 ), ExtResource( 99 ), ExtResource( 92 ), ExtResource( 81 ), ExtResource( 91 ), ExtResource( 110 ), ExtResource( 84 ), ExtResource( 96 ), ExtResource( 82 ), ExtResource( 97 ), ExtResource( 113 ), ExtResource( 85 ), ExtResource( 94 ), ExtResource( 105 ), ExtResource( 100 ), ExtResource( 107 ), ExtResource( 102 ), ExtResource( 98 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 108 ), ExtResource( 89 ), ExtResource( 111 ), ExtResource( 79 ), ExtResource( 90 ), ExtResource( 112 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 123 ), ExtResource( 126 ), ExtResource( 125 ) ],
 "loop": true,
@@ -143,10 +143,10 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 268.5, 117.612 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=4]
 resource_name = "0"
 length = 1.6
 loop = true
@@ -200,7 +200,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=5]
 resource_name = "1"
 length = 1.6
 loop = true
@@ -266,7 +266,7 @@ tracks/4/keys = {
 "values": [ Vector2( -328.091, -908.575 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=6]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -293,7 +293,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=7]
 resource_name = "0"
 length = 1.6
 loop = true
@@ -347,7 +347,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=8]
 resource_name = "1"
 length = 1.6
 loop = true
@@ -413,7 +413,7 @@ tracks/4/keys = {
 "values": [ Vector2( -328.091, -908.575 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=9]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -440,7 +440,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=10]
 resource_name = "0"
 length = 1.6
 loop = true
@@ -494,7 +494,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=11]
 resource_name = "1"
 length = 1.6
 loop = true
@@ -560,7 +560,7 @@ tracks/4/keys = {
 "values": [ Vector2( -328.091, -908.575 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=12]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -594,12 +594,12 @@ __meta__ = {
 }
 
 [node name="anim" type="AnimationPlayer" parent="."]
-anims/all_random = SubResource( 7 )
+anims/all_random = SubResource( 1 )
 
 [node name="tongue_left" type="AnimatedSprite" parent="."]
 position = Vector2( 299.678, 1008.52 )
 scale = Vector2( 0.474, 0.35 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "low"
 frame = 1
 __meta__ = {
@@ -608,22 +608,21 @@ __meta__ = {
 
 [node name="hitbox" type="Area2D" parent="tongue_left"]
 position = Vector2( 317.467, 952.446 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tongue_left/hitbox"]
 position = Vector2( -328.091, -908.575 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 disabled = true
 
 [node name="anim" type="AnimationPlayer" parent="tongue_left"]
-anims/0 = SubResource( 8 )
-anims/1 = SubResource( 9 )
-anims/RESET = SubResource( 10 )
+anims/0 = SubResource( 4 )
+anims/1 = SubResource( 5 )
+anims/RESET = SubResource( 6 )
 
 [node name="tongue_center" type="AnimatedSprite" parent="."]
 position = Vector2( 963.212, 1005.35 )
 scale = Vector2( 0.474, 0.35 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "low"
 frame = 1
 __meta__ = {
@@ -632,22 +631,21 @@ __meta__ = {
 
 [node name="hitbox" type="Area2D" parent="tongue_center"]
 position = Vector2( 317.468, 952.446 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tongue_center/hitbox"]
 position = Vector2( -328.091, -908.575 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 disabled = true
 
 [node name="anim" type="AnimationPlayer" parent="tongue_center"]
-anims/0 = SubResource( 11 )
-anims/1 = SubResource( 12 )
-anims/RESET = SubResource( 13 )
+anims/0 = SubResource( 7 )
+anims/1 = SubResource( 8 )
+anims/RESET = SubResource( 9 )
 
 [node name="tongue_right" type="AnimatedSprite" parent="."]
 position = Vector2( 1633.17, 1002.53 )
 scale = Vector2( 0.474, 0.35 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "low"
 frame = 1
 __meta__ = {
@@ -656,14 +654,13 @@ __meta__ = {
 
 [node name="hitbox" type="Area2D" parent="tongue_right"]
 position = Vector2( 317.467, 952.446 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tongue_right/hitbox"]
 position = Vector2( -328.091, -908.575 )
-shape = SubResource( 6 )
+shape = SubResource( 3 )
 disabled = true
 
 [node name="anim" type="AnimationPlayer" parent="tongue_right"]
-anims/0 = SubResource( 14 )
-anims/1 = SubResource( 15 )
-anims/RESET = SubResource( 16 )
+anims/0 = SubResource( 10 )
+anims/1 = SubResource( 11 )
+anims/RESET = SubResource( 12 )
