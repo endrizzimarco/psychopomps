@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://assets/nar_boss/phase_1/nar_spike_attack/center/nar_spike_attack_center0012.png" type="Texture" id=1]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_spike_attack/center/nar_spike_attack_center0010.png" type="Texture" id=2]
@@ -139,69 +139,6 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=4]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 14 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("hitbox/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:animation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ "left" ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../spike_right:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 20 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("../spike_right/hitbox/CollisionShape2D:disabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
-
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 30 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 24 ), ExtResource( 36 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 23 ), ExtResource( 29 ), ExtResource( 37 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 25 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 54 ), ExtResource( 65 ) ],
@@ -212,33 +149,6 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 268.5, 705.25 )
-
-[sub_resource type="Animation" id=7]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("hitbox/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
 
 [sub_resource type="Animation" id=8]
 resource_name = "spike_left"
@@ -267,18 +177,6 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
 }
 
 [sub_resource type="SpriteFrames" id=9]
@@ -317,18 +215,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [ false, true ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
@@ -366,18 +252,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [ false, true ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
 
 [node name="spike_atk" type="Node2D"]
 script = ExtResource( 66 )
@@ -391,14 +265,13 @@ root_node = NodePath("../spike_center")
 anims/0 = SubResource( 1 )
 anims/1 = SubResource( 2 )
 anims/2 = SubResource( 3 )
-anims/RESET = SubResource( 4 )
 
 [node name="spike_left" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 211.26, 700.25 )
 scale = Vector2( 0.474, 0.35 )
 frames = SubResource( 5 )
 animation = "left"
+frame = 21
 __meta__ = {
 "_edit_group_": true
 }
@@ -412,16 +285,14 @@ shape = SubResource( 6 )
 disabled = true
 
 [node name="anim_left" type="AnimationPlayer" parent="spike_left"]
-anims/RESET = SubResource( 7 )
 anims/spike_left = SubResource( 8 )
 
 [node name="spike_center" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 991.26, 696.25 )
 scale = Vector2( 0.473864, 0.35 )
 frames = SubResource( 9 )
 animation = "center"
-frame = 14
+frame = 21
 __meta__ = {
 "_edit_group_": true
 }
@@ -437,7 +308,6 @@ shape = SubResource( 6 )
 disabled = true
 
 [node name="spike_right" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 1695.26, 691.25 )
 scale = Vector2( 0.516376, 0.367824 )
 frames = SubResource( 11 )
