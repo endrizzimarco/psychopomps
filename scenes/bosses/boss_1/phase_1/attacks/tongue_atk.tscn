@@ -1,0 +1,702 @@
+[gd_scene load_steps=96 format=2]
+
+[ext_resource path="res://scenes/bosses/boss_1/phase_1/attacks/tongue_atk.gd" type="Script" id=1]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0031.png" type="Texture" id=45]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0015.png" type="Texture" id=46]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0019.png" type="Texture" id=47]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0020.png" type="Texture" id=48]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0029.png" type="Texture" id=49]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0022.png" type="Texture" id=50]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0032.png" type="Texture" id=51]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0016.png" type="Texture" id=52]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0017.png" type="Texture" id=53]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0026.png" type="Texture" id=54]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0011.png" type="Texture" id=55]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0025.png" type="Texture" id=56]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0028.png" type="Texture" id=57]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0030.png" type="Texture" id=58]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0033.png" type="Texture" id=59]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0034.png" type="Texture" id=60]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0037.png" type="Texture" id=61]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0040.png" type="Texture" id=62]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0024.png" type="Texture" id=63]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0012.png" type="Texture" id=64]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0035.png" type="Texture" id=65]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0027.png" type="Texture" id=66]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0021.png" type="Texture" id=67]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0039.png" type="Texture" id=68]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0018.png" type="Texture" id=69]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0010.png" type="Texture" id=70]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0038.png" type="Texture" id=71]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0013.png" type="Texture" id=72]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0036.png" type="Texture" id=73]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0014.png" type="Texture" id=74]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0023.png" type="Texture" id=75]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0004.png" type="Texture" id=76]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0036.png" type="Texture" id=77]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0037.png" type="Texture" id=78]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0033.png" type="Texture" id=79]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0010.png" type="Texture" id=80]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0013.png" type="Texture" id=81]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0018.png" type="Texture" id=82]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0000.png" type="Texture" id=83]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0016.png" type="Texture" id=84]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0021.png" type="Texture" id=85]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0001.png" type="Texture" id=86]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0028.png" type="Texture" id=87]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0029.png" type="Texture" id=88]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0031.png" type="Texture" id=89]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0034.png" type="Texture" id=90]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0014.png" type="Texture" id=91]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0012.png" type="Texture" id=92]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0003.png" type="Texture" id=93]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0022.png" type="Texture" id=94]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0007.png" type="Texture" id=95]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0017.png" type="Texture" id=96]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0019.png" type="Texture" id=97]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0027.png" type="Texture" id=98]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0011.png" type="Texture" id=99]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0024.png" type="Texture" id=100]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0009.png" type="Texture" id=101]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0026.png" type="Texture" id=102]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0005.png" type="Texture" id=103]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0008.png" type="Texture" id=104]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0023.png" type="Texture" id=105]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0006.png" type="Texture" id=106]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0025.png" type="Texture" id=107]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0030.png" type="Texture" id=108]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0002.png" type="Texture" id=109]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0015.png" type="Texture" id=110]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0032.png" type="Texture" id=111]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0035.png" type="Texture" id=112]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0020.png" type="Texture" id=113]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0000.png" type="Texture" id=114]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0002.png" type="Texture" id=115]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0003.png" type="Texture" id=116]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0005.png" type="Texture" id=117]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0006.png" type="Texture" id=118]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0007.png" type="Texture" id=119]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0001.png" type="Texture" id=120]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0004.png" type="Texture" id=121]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0008.png" type="Texture" id=122]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0038.png" type="Texture" id=123]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0009.png" type="Texture" id=124]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0040.png" type="Texture" id=125]
+[ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/high/nar_tongue_attack_high0039.png" type="Texture" id=126]
+
+[sub_resource type="Animation" id=7]
+resource_name = "all_random"
+length = 1.6
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ null ],
+"method": "_tongue_left"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ null ],
+"method": "_tongue_center"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ null ],
+"method": "_tongue_right"
+} ]
+}
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 83 ), ExtResource( 86 ), ExtResource( 109 ), ExtResource( 93 ), ExtResource( 76 ), ExtResource( 103 ), ExtResource( 106 ), ExtResource( 95 ), ExtResource( 104 ), ExtResource( 101 ), ExtResource( 80 ), ExtResource( 99 ), ExtResource( 92 ), ExtResource( 81 ), ExtResource( 91 ), ExtResource( 110 ), ExtResource( 84 ), ExtResource( 96 ), ExtResource( 82 ), ExtResource( 97 ), ExtResource( 113 ), ExtResource( 85 ), ExtResource( 94 ), ExtResource( 105 ), ExtResource( 100 ), ExtResource( 107 ), ExtResource( 102 ), ExtResource( 98 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 108 ), ExtResource( 89 ), ExtResource( 111 ), ExtResource( 79 ), ExtResource( 90 ), ExtResource( 112 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 123 ), ExtResource( 126 ), ExtResource( 125 ) ],
+"loop": true,
+"name": "low",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 114 ), ExtResource( 120 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 121 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 122 ), ExtResource( 124 ), ExtResource( 70 ), ExtResource( 55 ), ExtResource( 64 ), ExtResource( 72 ), ExtResource( 74 ), ExtResource( 46 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 69 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 67 ), ExtResource( 50 ), ExtResource( 75 ), ExtResource( 63 ), ExtResource( 56 ), ExtResource( 54 ), ExtResource( 66 ), ExtResource( 57 ), ExtResource( 49 ), ExtResource( 58 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 65 ), ExtResource( 73 ), ExtResource( 61 ), ExtResource( 71 ), ExtResource( 68 ), ExtResource( 62 ) ],
+"loop": true,
+"name": "high",
+"speed": 30.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 268.5, 117.612 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "0"
+length = 1.6
+loop = true
+step = 0.033
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.85, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "low" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.033, 0.066, 0.099, 0.132, 0.165, 0.198, 0.231, 0.264, 0.297, 0.33, 0.363, 0.396, 0.429, 0.462, 0.495, 0.528, 0.561, 0.594, 0.627, 0.66, 0.693, 0.726, 0.759, 0.792, 0.825, 0.858, 0.891, 0.924, 0.957, 0.99, 1.023, 1.056, 1.089, 1.122, 1.155, 1.188, 1.221, 1.254, 1.287, 1.32, 1.34531, 1.38157, 1.419, 1.452, 1.485, 1.518, 1.551 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 10, 8, 7, 6, 5, 4, 2, 1, 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 299.678, 1008.52 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.891, 1.254 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "1"
+length = 1.6
+loop = true
+step = 0.033
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "high" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.033, 0.066, 0.099, 0.132, 0.165, 0.198, 0.231, 0.264, 0.297, 0.33, 0.363, 0.396, 0.429, 0.462, 0.495, 0.528, 0.561, 0.594, 0.627, 0.66, 0.693, 0.726, 0.759, 0.792, 0.825, 0.858, 0.891, 0.924, 0.957, 0.99, 1.023, 1.056, 1.089, 1.122, 1.155, 1.188, 1.221, 1.254, 1.287, 1.32, 1.34531, 1.38157, 1.419, 1.452, 1.485, 1.518, 1.551 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 10, 8, 7, 6, 5, 4, 2, 1, 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 308.154, 868.673 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.891, 1.254 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("hitbox/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -328.091, -908.575 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "0"
+length = 1.6
+loop = true
+step = 0.033
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.85, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "low" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.033, 0.066, 0.099, 0.132, 0.165, 0.198, 0.231, 0.264, 0.297, 0.33, 0.363, 0.396, 0.429, 0.462, 0.495, 0.528, 0.561, 0.594, 0.627, 0.66, 0.693, 0.726, 0.759, 0.792, 0.825, 0.858, 0.891, 0.924, 0.957, 0.99, 1.023, 1.056, 1.089, 1.122, 1.155, 1.188, 1.221, 1.254, 1.287, 1.32, 1.34531, 1.38157, 1.419, 1.452, 1.485, 1.518, 1.551 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 10, 8, 7, 6, 5, 4, 2, 1, 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 963.212, 1005.35 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.891, 1.254 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "1"
+length = 1.6
+loop = true
+step = 0.033
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "high" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.033, 0.066, 0.099, 0.132, 0.165, 0.198, 0.231, 0.264, 0.297, 0.33, 0.363, 0.396, 0.429, 0.462, 0.495, 0.528, 0.561, 0.594, 0.627, 0.66, 0.693, 0.726, 0.759, 0.792, 0.825, 0.858, 0.891, 0.924, 0.957, 0.99, 1.023, 1.056, 1.089, 1.122, 1.155, 1.188, 1.221, 1.254, 1.287, 1.32, 1.34531, 1.38157, 1.419, 1.452, 1.485, 1.518, 1.551 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 10, 8, 7, 6, 5, 4, 2, 1, 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 978.359, 862.323 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.891, 1.254 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("hitbox/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -328.091, -908.575 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "0"
+length = 1.6
+loop = true
+step = 0.033
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.85, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "low" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.033, 0.066, 0.099, 0.132, 0.165, 0.198, 0.231, 0.264, 0.297, 0.33, 0.363, 0.396, 0.429, 0.462, 0.495, 0.528, 0.561, 0.594, 0.627, 0.66, 0.693, 0.726, 0.759, 0.792, 0.825, 0.858, 0.891, 0.924, 0.957, 0.99, 1.023, 1.056, 1.089, 1.122, 1.155, 1.188, 1.221, 1.254, 1.287, 1.32, 1.34531, 1.38157, 1.419, 1.452, 1.485, 1.518, 1.551 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 10, 8, 7, 6, 5, 4, 2, 1, 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1633.17, 1002.53 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.891, 1.254 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "1"
+length = 1.6
+loop = true
+step = 0.033
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "high" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.033, 0.066, 0.099, 0.132, 0.165, 0.198, 0.231, 0.264, 0.297, 0.33, 0.363, 0.396, 0.429, 0.462, 0.495, 0.528, 0.561, 0.594, 0.627, 0.66, 0.693, 0.726, 0.759, 0.792, 0.825, 0.858, 0.891, 0.924, 0.957, 0.99, 1.023, 1.056, 1.089, 1.122, 1.155, 1.188, 1.221, 1.254, 1.287, 1.32, 1.34531, 1.38157, 1.419, 1.452, 1.485, 1.518, 1.551 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 10, 8, 7, 6, 5, 4, 2, 1, 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1671.61, 868.673 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.891, 1.254 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("hitbox/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -328.091, -908.575 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[node name="tongue_atk" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="anim" type="AnimationPlayer" parent="."]
+anims/all_random = SubResource( 7 )
+
+[node name="tongue_left" type="AnimatedSprite" parent="."]
+position = Vector2( 308.154, 868.673 )
+scale = Vector2( 0.474, 0.35 )
+frames = SubResource( 1 )
+animation = "high"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="hitbox" type="Area2D" parent="tongue_left"]
+position = Vector2( 317.467, 952.446 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tongue_left/hitbox"]
+position = Vector2( -328.091, -908.575 )
+shape = SubResource( 6 )
+disabled = true
+
+[node name="anim" type="AnimationPlayer" parent="tongue_left"]
+anims/0 = SubResource( 8 )
+anims/1 = SubResource( 9 )
+anims/RESET = SubResource( 10 )
+
+[node name="tongue_center" type="AnimatedSprite" parent="."]
+position = Vector2( 978.359, 862.323 )
+scale = Vector2( 0.474, 0.35 )
+frames = SubResource( 1 )
+animation = "high"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="hitbox" type="Area2D" parent="tongue_center"]
+position = Vector2( 317.468, 952.446 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tongue_center/hitbox"]
+position = Vector2( -328.091, -908.575 )
+shape = SubResource( 6 )
+disabled = true
+
+[node name="anim" type="AnimationPlayer" parent="tongue_center"]
+anims/0 = SubResource( 11 )
+anims/1 = SubResource( 12 )
+anims/RESET = SubResource( 13 )
+
+[node name="tongue_right" type="AnimatedSprite" parent="."]
+position = Vector2( 1671.61, 868.673 )
+scale = Vector2( 0.474, 0.35 )
+frames = SubResource( 1 )
+animation = "high"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="hitbox" type="Area2D" parent="tongue_right"]
+position = Vector2( 317.467, 952.446 )
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tongue_right/hitbox"]
+position = Vector2( -328.091, -908.575 )
+shape = SubResource( 6 )
+disabled = true
+
+[node name="anim" type="AnimationPlayer" parent="tongue_right"]
+anims/0 = SubResource( 14 )
+anims/1 = SubResource( 15 )
+anims/RESET = SubResource( 16 )
