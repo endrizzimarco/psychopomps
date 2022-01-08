@@ -67,7 +67,7 @@
 [ext_resource path="res://assets/nar_boss/phase_1/nar_spike_attack/left/nar_spike_attack_left0050.png" type="Texture" id=65]
 [ext_resource path="res://scenes/bosses/boss_1/phase_1/attacks/spike_atk.gd" type="Script" id=66]
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=1]
 resource_name = "0"
 length = 1.5
 tracks/0/type = "animation"
@@ -91,7 +91,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=2]
 resource_name = "1"
 length = 1.5
 tracks/0/type = "animation"
@@ -115,7 +115,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "2"
 length = 1.5
 tracks/0/type = "animation"
@@ -139,7 +139,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -202,7 +202,7 @@ tracks/4/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 30 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 34 ), ExtResource( 24 ), ExtResource( 36 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 23 ), ExtResource( 29 ), ExtResource( 37 ), ExtResource( 26 ), ExtResource( 32 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 25 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 54 ), ExtResource( 65 ) ],
 "loop": true,
@@ -210,10 +210,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 268.5, 705.25 )
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=7]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
@@ -240,7 +240,7 @@ tracks/1/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=8]
 resource_name = "spike_left"
 length = 1.5
 step = 0.05
@@ -281,7 +281,7 @@ tracks/2/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 9 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 22 ) ],
 "loop": true,
@@ -289,7 +289,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=10]
 resource_name = "spike_center"
 length = 1.5
 step = 0.05
@@ -330,7 +330,7 @@ tracks/2/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=11]
 animations = [ {
 "frames": [ ExtResource( 51 ), ExtResource( 59 ), ExtResource( 45 ), ExtResource( 48 ), ExtResource( 46 ), ExtResource( 57 ), ExtResource( 49 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 44 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 53 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 62 ), ExtResource( 43 ), ExtResource( 60 ), ExtResource( 47 ), ExtResource( 50 ), ExtResource( 61 ) ],
 "loop": true,
@@ -338,7 +338,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=12]
 resource_name = "spike_right"
 length = 1.5
 step = 0.05
@@ -388,16 +388,16 @@ __meta__ = {
 
 [node name="anim" type="AnimationPlayer" parent="."]
 root_node = NodePath("../spike_center")
-anims/0 = SubResource( 14 )
-anims/1 = SubResource( 15 )
-anims/2 = SubResource( 5 )
-anims/RESET = SubResource( 6 )
+anims/0 = SubResource( 1 )
+anims/1 = SubResource( 2 )
+anims/2 = SubResource( 3 )
+anims/RESET = SubResource( 4 )
 
 [node name="spike_left" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 211.26, 700.25 )
 scale = Vector2( 0.474, 0.35 )
-frames = SubResource( 9 )
+frames = SubResource( 5 )
 animation = "left"
 __meta__ = {
 "_edit_group_": true
@@ -408,18 +408,18 @@ position = Vector2( 42, 312 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spike_left/hitbox"]
 position = Vector2( 2.3038, 13.7142 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 disabled = true
 
 [node name="anim_left" type="AnimationPlayer" parent="spike_left"]
-anims/RESET = SubResource( 16 )
-anims/spike_left = SubResource( 17 )
+anims/RESET = SubResource( 7 )
+anims/spike_left = SubResource( 8 )
 
 [node name="spike_center" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 991.26, 696.25 )
 scale = Vector2( 0.473864, 0.35 )
-frames = SubResource( 1 )
+frames = SubResource( 9 )
 animation = "center"
 frame = 14
 __meta__ = {
@@ -427,20 +427,20 @@ __meta__ = {
 }
 
 [node name="anim_center" type="AnimationPlayer" parent="spike_center"]
-anims/spike_center = SubResource( 11 )
+anims/spike_center = SubResource( 10 )
 
 [node name="hitbox" type="Area2D" parent="spike_center"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spike_center/hitbox"]
 position = Vector2( -60, 377.25 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 disabled = true
 
 [node name="spike_right" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 1695.26, 691.25 )
 scale = Vector2( 0.516376, 0.367824 )
-frames = SubResource( 12 )
+frames = SubResource( 11 )
 animation = "right"
 frame = 20
 __meta__ = {
@@ -448,11 +448,11 @@ __meta__ = {
 }
 
 [node name="anim_right" type="AnimationPlayer" parent="spike_right"]
-anims/spike_right = SubResource( 13 )
+anims/spike_right = SubResource( 12 )
 
 [node name="hitbox" type="Area2D" parent="spike_right"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spike_right/hitbox"]
 position = Vector2( -60, 377.25 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 disabled = true
