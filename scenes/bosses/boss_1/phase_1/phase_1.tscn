@@ -539,7 +539,7 @@ scale = Vector2( 0.469016, 0.472047 )
 z_index = -2
 frames = SubResource( 6 )
 animation = "mirror_idle"
-frame = 10
+frame = 8
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -550,7 +550,7 @@ position = Vector2( 901.468, -410.432 )
 scale = Vector2( 1.07733, 1.05549 )
 frames = SubResource( 7 )
 animation = "reflection"
-frame = 31
+frame = 57
 playing = true
 
 [node name="boss" type="KinematicBody2D" parent="."]
@@ -574,7 +574,7 @@ position = Vector2( 1021.59, 433.3 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 9 )
 animation = "idle"
-frame = 11
+frame = 38
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -594,5 +594,5 @@ scale = Vector2( 1.05904, 0.868271 )
 z_index = -1
 frames = SubResource( 10 )
 animation = "ripple"
-frame = 9
+frame = 6
 playing = true
