@@ -1,4 +1,4 @@
-[gd_scene load_steps=220 format=2]
+[gd_scene load_steps=221 format=2]
 
 [ext_resource path="res://assets/player/player_idle/player_idle0026.png" type="Texture" id=1]
 [ext_resource path="res://scripts/state.gd" type="Script" id=2]
@@ -204,37 +204,13 @@
 [ext_resource path="res://assets/player/player_damaged/player_damaged0003.png" type="Texture" id=202]
 [ext_resource path="res://assets/player/player_damaged/player_damaged0002.png" type="Texture" id=203]
 [ext_resource path="res://assets/player/player_damaged/player_damaged0001.png" type="Texture" id=204]
+[ext_resource path="res://guide.png" type="Texture" id=205]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 25 ), ExtResource( 14 ), ExtResource( 31 ), ExtResource( 17 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 15 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 34 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 19 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 16 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 13 ), ExtResource( 18 ), ExtResource( 38 ), ExtResource( 21 ), ExtResource( 1 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 32 ) ],
 "loop": true,
 "name": "idle",
-"speed": 30.0
-}, {
-"frames": [ ExtResource( 40 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ) ],
-"loop": false,
-"name": "crouch",
-"speed": 30.0
-}, {
-"frames": [ ExtResource( 149 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 145 ), ExtResource( 151 ), ExtResource( 144 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 143 ), ExtResource( 142 ), ExtResource( 140 ), ExtResource( 144 ), ExtResource( 151 ), ExtResource( 145 ), ExtResource( 150 ), ExtResource( 146 ), ExtResource( 148 ), ExtResource( 147 ), ExtResource( 149 ) ],
-"loop": false,
-"name": "jump",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 156 ), ExtResource( 158 ), ExtResource( 157 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 159 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 169 ), ExtResource( 167 ) ],
-"loop": false,
-"name": "light_atk",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 168 ), ExtResource( 160 ), ExtResource( 162 ), ExtResource( 170 ), ExtResource( 163 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 161 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 179 ), ExtResource( 194 ), ExtResource( 191 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 186 ), ExtResource( 188 ), ExtResource( 185 ), ExtResource( 192 ), ExtResource( 190 ), ExtResource( 193 ), ExtResource( 184 ), ExtResource( 181 ), ExtResource( 189 ), ExtResource( 183 ), ExtResource( 182 ), ExtResource( 187 ), ExtResource( 180 ) ],
-"loop": false,
-"name": "heavy_atk",
-"speed": 30.0
-}, {
-"frames": [ ExtResource( 201 ), ExtResource( 204 ), ExtResource( 203 ), ExtResource( 202 ), ExtResource( 199 ), ExtResource( 198 ), ExtResource( 200 ) ],
-"loop": false,
-"name": "hit",
 "speed": 30.0
 }, {
 "frames": [ ExtResource( 131 ), ExtResource( 132 ), ExtResource( 135 ), ExtResource( 134 ), ExtResource( 136 ), ExtResource( 133 ), ExtResource( 128 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 130 ) ],
@@ -247,11 +223,6 @@ animations = [ {
 "name": "crouch_idle",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 114 ), ExtResource( 70 ), ExtResource( 117 ), ExtResource( 108 ), ExtResource( 71 ), ExtResource( 105 ), ExtResource( 118 ), ExtResource( 73 ) ],
-"loop": false,
-"name": "crouch_dash_right",
-"speed": 30.0
-}, {
 "frames": [ ExtResource( 126 ), ExtResource( 127 ), ExtResource( 129 ), ExtResource( 123 ), ExtResource( 120 ), ExtResource( 122 ), ExtResource( 121 ), ExtResource( 138 ), ExtResource( 137 ), ExtResource( 139 ) ],
 "loop": false,
 "name": "dash_right",
@@ -260,6 +231,36 @@ animations = [ {
 "frames": [ ExtResource( 104 ), ExtResource( 85 ), ExtResource( 81 ), ExtResource( 83 ), ExtResource( 68 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 113 ) ],
 "loop": false,
 "name": "crouch_dash_left",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 114 ), ExtResource( 70 ), ExtResource( 117 ), ExtResource( 108 ), ExtResource( 71 ), ExtResource( 105 ), ExtResource( 118 ), ExtResource( 73 ) ],
+"loop": false,
+"name": "crouch_dash_right",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ) ],
+"loop": false,
+"name": "crouch",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 168 ), ExtResource( 160 ), ExtResource( 162 ), ExtResource( 170 ), ExtResource( 163 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 161 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 179 ), ExtResource( 194 ), ExtResource( 191 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 186 ), ExtResource( 188 ), ExtResource( 185 ), ExtResource( 192 ), ExtResource( 190 ), ExtResource( 193 ), ExtResource( 184 ), ExtResource( 181 ), ExtResource( 189 ), ExtResource( 183 ), ExtResource( 182 ), ExtResource( 187 ), ExtResource( 180 ) ],
+"loop": false,
+"name": "heavy_atk",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 156 ), ExtResource( 158 ), ExtResource( 157 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 159 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 169 ), ExtResource( 167 ) ],
+"loop": false,
+"name": "light_atk",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 149 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 146 ), ExtResource( 150 ), ExtResource( 145 ), ExtResource( 151 ), ExtResource( 144 ), ExtResource( 140 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 143 ), ExtResource( 142 ), ExtResource( 140 ), ExtResource( 144 ), ExtResource( 151 ), ExtResource( 145 ), ExtResource( 150 ), ExtResource( 146 ), ExtResource( 148 ), ExtResource( 147 ), ExtResource( 149 ) ],
+"loop": false,
+"name": "jump",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 201 ), ExtResource( 204 ), ExtResource( 203 ), ExtResource( 202 ), ExtResource( 199 ), ExtResource( 198 ), ExtResource( 200 ) ],
+"loop": false,
+"name": "hit",
 "speed": 30.0
 } ]
 
@@ -534,8 +535,8 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=14]
-length = 0.3
-step = 0.015
+length = 0.566667
+step = 0.0333333
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position:y")
 tracks/0/interp = 1
@@ -560,6 +561,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [ "jump" ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("player_sprites:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 7 ]
+}
 
 [sub_resource type="Animation" id=15]
 length = 0.25
@@ -580,13 +593,18 @@ tracks/0/keys = {
 position = Vector2( 1252.52, 1100 )
 script = ExtResource( 3 )
 
+[node name="guide" type="Sprite" parent="."]
+visible = false
+position = Vector2( -291.694, -560.226 )
+scale = Vector2( 0.499889, 0.497194 )
+texture = ExtResource( 205 )
+
 [node name="player_sprites" type="AnimatedSprite" parent="."]
 position = Vector2( -272.85, -219.669 )
 scale = Vector2( 0.362152, 0.359842 )
 frames = SubResource( 1 )
-animation = "dash_left"
-frame = 9
-playing = true
+animation = "jump"
+frame = 7
 __meta__ = {
 "_edit_lock_": true
 }
