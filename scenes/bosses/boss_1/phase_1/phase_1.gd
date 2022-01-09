@@ -22,6 +22,12 @@ func _tongue_attack():
 	var tongue_atk = preload("res://scenes/bosses/boss_1/phase_1/attacks/tongue_atk.tscn").instance()
 	add_child(tongue_atk)
 
+
+func _rain_attack():
+	var rain_atk = preload("res://scenes/bosses/boss_1/phase_1/attacks/rain_atk.tscn").instance()
+	add_child(rain_atk)
+
+
 func _change_side():
 	if curr_side == "right":
 		curr_side = "left"
