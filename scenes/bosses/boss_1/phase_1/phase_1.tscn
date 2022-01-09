@@ -211,7 +211,7 @@ tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
 "clips": PoolStringArray( "arm_atk", "spike_atk", "tongue_atk" ),
-"times": PoolRealArray( 0, 2.4, 5.9 )
+"times": PoolRealArray( 0, 3, 7 )
 }
 tracks/1/type = "method"
 tracks/1/path = NodePath(".")
@@ -220,7 +220,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 2.9 ),
+"times": PoolRealArray( 6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -253,7 +253,7 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 2.5 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 0,
+"update": 2,
 "values": [ "arm_atk", "reflection" ]
 }
 
@@ -551,7 +551,7 @@ position = Vector2( 553.037, -481.91 )
 scale = Vector2( 1.07733, 1.05549 )
 frames = SubResource( 7 )
 animation = "reflection"
-frame = 17
+frame = 47
 playing = true
 
 [node name="boss" type="KinematicBody2D" parent="."]
@@ -575,11 +575,11 @@ position = Vector2( 943.117, 405.062 )
 scale = Vector2( 0.552226, 0.556352 )
 frames = SubResource( 9 )
 animation = "idle"
-frame = 59
+frame = 14
 playing = true
 
 [node name="head" type="Sprite" parent="boss/body"]
-position = Vector2( -61.9565, -520.718 )
+position = Vector2( -86.9281, -570.478 )
 z_index = -1
 texture = ExtResource( 231 )
 __meta__ = {
@@ -592,5 +592,5 @@ scale = Vector2( 1.01966, 0.848434 )
 z_index = -1
 frames = SubResource( 10 )
 animation = "ripple"
-frame = 8
+frame = 10
 playing = true
