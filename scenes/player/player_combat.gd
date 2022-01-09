@@ -5,7 +5,7 @@ onready var fsm = FSM.new(self, $states, $states/idle, true)
 var anim_cur = ""
 var anim_nxt = "idle"
 
-enum Position {LEFT=500, CENTER=1250, RIGHT=2000}
+enum Position {LEFT=700, CENTER=1250, RIGHT=1800}
 var pos_cur = Position.CENTER
 var dash_dir : String
 

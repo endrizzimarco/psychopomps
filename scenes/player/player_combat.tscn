@@ -535,7 +535,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=14]
-length = 0.566667
+length = 0.3
 step = 0.0333333
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position:y")
@@ -600,14 +600,12 @@ scale = Vector2( 0.499889, 0.497194 )
 texture = ExtResource( 205 )
 
 [node name="player_sprites" type="AnimatedSprite" parent="."]
-position = Vector2( -272.85, -219.669 )
-scale = Vector2( 0.362152, 0.359842 )
+position = Vector2( -265.7, -271.995 )
+scale = Vector2( 0.495905, 0.491332 )
 frames = SubResource( 1 )
-animation = "jump"
-frame = 7
-__meta__ = {
-"_edit_lock_": true
-}
+animation = "dash_left"
+frame = 9
+playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]
 visible = false
@@ -622,6 +620,7 @@ position = Vector2( -274.401, -227.655 )
 
 [node name="hitbox_collision" type="CollisionShape2D" parent="hurtbox"]
 position = Vector2( -3.57166, 21.8345 )
+scale = Vector2( 1, -0.6 )
 shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
