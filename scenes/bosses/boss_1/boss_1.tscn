@@ -1,10 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/bosses/boss_1/phase_1/phase_1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/player/player_combat.tscn" type="PackedScene" id=2]
 [ext_resource path="res://guide.png" type="Texture" id=3]
+[ext_resource path="res://assets/Background/Baseline background.png" type="Texture" id=4]
 
 [node name="boss_1" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -10
+texture = ExtResource( 4 )
 
 [node name="guide" type="Sprite" parent="."]
 visible = false
