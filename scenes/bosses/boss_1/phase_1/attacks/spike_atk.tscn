@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://assets/nar_boss/phase_1/nar_spike_attack/center/nar_spike_attack_center0012.png" type="Texture" id=1]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_spike_attack/center/nar_spike_attack_center0010.png" type="Texture" id=2]
@@ -66,6 +66,7 @@
 [ext_resource path="res://assets/nar_boss/phase_1/nar_spike_attack/right/nar_spike_attack_right0027.png" type="Texture" id=64]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_spike_attack/left/nar_spike_attack_left0050.png" type="Texture" id=65]
 [ext_resource path="res://scenes/bosses/boss_1/phase_1/attacks/spike_atk.gd" type="Script" id=66]
+[ext_resource path="res://guide.png" type="Texture" id=67]
 
 [sub_resource type="Animation" id=1]
 resource_name = "0"
@@ -260,6 +261,12 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="guide" type="Sprite" parent="."]
+visible = false
+position = Vector2( 960, 540 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 67 )
+
 [node name="anim" type="AnimationPlayer" parent="."]
 root_node = NodePath("../spike_center")
 anims/0 = SubResource( 1 )
@@ -267,11 +274,10 @@ anims/1 = SubResource( 2 )
 anims/2 = SubResource( 3 )
 
 [node name="spike_left" type="AnimatedSprite" parent="."]
-position = Vector2( 211.26, 700.25 )
-scale = Vector2( 0.474, 0.35 )
+position = Vector2( 385.098, 527.725 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 4 )
 animation = "left"
-frame = 21
 __meta__ = {
 "_edit_group_": true
 }
@@ -288,11 +294,11 @@ disabled = true
 anims/spike_left = SubResource( 6 )
 
 [node name="spike_center" type="AnimatedSprite" parent="."]
-position = Vector2( 991.26, 696.25 )
-scale = Vector2( 0.473864, 0.35 )
+position = Vector2( 996.917, 543.515 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 7 )
 animation = "center"
-frame = 21
+frame = 15
 __meta__ = {
 "_edit_group_": true
 }
@@ -308,11 +314,11 @@ shape = SubResource( 5 )
 disabled = true
 
 [node name="spike_right" type="AnimatedSprite" parent="."]
-position = Vector2( 1695.26, 691.25 )
-scale = Vector2( 0.516376, 0.367824 )
+position = Vector2( 1559.5, 535.686 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 9 )
 animation = "right"
-frame = 20
+frame = 14
 __meta__ = {
 "_edit_group_": true
 }
