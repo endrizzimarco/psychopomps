@@ -186,7 +186,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 428.112, 746 ) ]
+"values": [ Vector2( 459.896, 735.405 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("hitbox/CollisionShape2D:disabled")
@@ -195,7 +195,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.891, 1.254 ),
+"times": PoolRealArray( 0.924, 1.254 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -342,7 +342,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.891, 1.254 ),
+"times": PoolRealArray( 0.924, 1.254 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -480,7 +480,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 1602.25, 731.391 ) ]
+"values": [ Vector2( 1496.3, 722.915 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("hitbox/CollisionShape2D:disabled")
@@ -489,7 +489,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.891, 1.254 ),
+"times": PoolRealArray( 0.924, 1.254 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -604,11 +604,11 @@ texture = ExtResource( 2 )
 anims/all_random = SubResource( 1 )
 
 [node name="tongue_left" type="AnimatedSprite" parent="."]
-position = Vector2( 428.112, 746 )
+position = Vector2( 459.896, 735.405 )
 scale = Vector2( 0.474, 0.35 )
 frames = SubResource( 2 )
 animation = "low"
-frame = 10
+frame = 1
 __meta__ = {
 "_edit_group_": true
 }
@@ -631,6 +631,7 @@ position = Vector2( 986.996, 727.076 )
 scale = Vector2( 0.474, 0.35 )
 frames = SubResource( 2 )
 animation = "low"
+frame = 1
 __meta__ = {
 "_edit_group_": true
 }
@@ -649,10 +650,11 @@ anims/1 = SubResource( 8 )
 anims/RESET = SubResource( 9 )
 
 [node name="tongue_right" type="AnimatedSprite" parent="."]
-position = Vector2( 1602.25, 731.391 )
+position = Vector2( 1496.3, 722.915 )
 scale = Vector2( 0.474, 0.35 )
 frames = SubResource( 2 )
 animation = "low"
+frame = 1
 __meta__ = {
 "_edit_group_": true
 }

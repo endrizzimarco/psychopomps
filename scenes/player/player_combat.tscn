@@ -1,4 +1,4 @@
-[gd_scene load_steps=221 format=2]
+[gd_scene load_steps=219 format=2]
 
 [ext_resource path="res://assets/player/player_idle/player_idle0026.png" type="Texture" id=1]
 [ext_resource path="res://scripts/state.gd" type="Script" id=2]
@@ -39,14 +39,12 @@
 [ext_resource path="res://assets/player/player_idle/player_idle0018.png" type="Texture" id=37]
 [ext_resource path="res://assets/player/player_idle/player_idle0024.png" type="Texture" id=38]
 [ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0002.png" type="Texture" id=39]
-[ext_resource path="res://assets/player/player_crouch/crouch/player_crouch0000.png" type="Texture" id=40]
 [ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0004.png" type="Texture" id=41]
 [ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0000.png" type="Texture" id=42]
 [ext_resource path="res://assets/player/player_crouch/crouch/player_crouch0001.png" type="Texture" id=43]
 [ext_resource path="res://assets/player/player_crouch/crouch/player_crouch0002.png" type="Texture" id=44]
 [ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0001.png" type="Texture" id=45]
 [ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0003.png" type="Texture" id=46]
-[ext_resource path="res://assets/player/player_crouch/crouch/player_crouch0003.png" type="Texture" id=47]
 [ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0005.png" type="Texture" id=48]
 [ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0007.png" type="Texture" id=49]
 [ext_resource path="res://assets/player/player_crouch/idle/player_crouch_idle0008.png" type="Texture" id=50]
@@ -213,7 +211,7 @@ animations = [ {
 "name": "idle",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 40 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 47 ) ],
+"frames": [ ExtResource( 43 ), ExtResource( 44 ) ],
 "loop": false,
 "name": "crouch",
 "speed": 30.0
@@ -298,7 +296,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=5]
-length = 0.2
+length = 0.066
 step = 0.033
 tracks/0/type = "value"
 tracks/0/path = NodePath("hurtbox/hitbox_collision:scale")
@@ -603,8 +601,8 @@ texture = ExtResource( 205 )
 position = Vector2( -265.7, -271.995 )
 scale = Vector2( 0.495905, 0.491332 )
 frames = SubResource( 1 )
-animation = "idle"
-frame = 30
+animation = "crouch"
+frame = 1
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]
@@ -620,6 +618,7 @@ position = Vector2( -274.401, -227.655 )
 
 [node name="hitbox_collision" type="CollisionShape2D" parent="hurtbox"]
 position = Vector2( -3.57166, 21.8345 )
+scale = Vector2( 1, -0.6 )
 shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
