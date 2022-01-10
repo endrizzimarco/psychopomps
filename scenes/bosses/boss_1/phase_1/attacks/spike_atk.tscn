@@ -274,10 +274,11 @@ anims/1 = SubResource( 2 )
 anims/2 = SubResource( 3 )
 
 [node name="spike_left" type="AnimatedSprite" parent="."]
-position = Vector2( 385.098, 527.725 )
+position = Vector2( 387.927, 527.725 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 4 )
 animation = "left"
+frame = 21
 __meta__ = {
 "_edit_group_": true
 }
@@ -298,7 +299,7 @@ position = Vector2( 996.917, 543.515 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 7 )
 animation = "center"
-frame = 15
+frame = 21
 __meta__ = {
 "_edit_group_": true
 }
@@ -318,7 +319,7 @@ position = Vector2( 1559.5, 535.686 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 9 )
 animation = "right"
-frame = 14
+frame = 20
 __meta__ = {
 "_edit_group_": true
 }
