@@ -1,7 +1,6 @@
-[gd_scene load_steps=97 format=2]
+[gd_scene load_steps=96 format=2]
 
 [ext_resource path="res://scenes/bosses/boss_1/phase_1/attacks/tongue_atk.gd" type="Script" id=1]
-[ext_resource path="res://guide.png" type="Texture" id=2]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0031.png" type="Texture" id=45]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0015.png" type="Texture" id=46]
 [ext_resource path="res://assets/nar_boss/phase_1/nar_tongue_attack/low/nar_tongue_attack_low0019.png" type="Texture" id=47]
@@ -133,14 +132,14 @@ tracks/2/keys = {
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 114 ), ExtResource( 120 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 121 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 122 ), ExtResource( 124 ), ExtResource( 70 ), ExtResource( 55 ), ExtResource( 64 ), ExtResource( 72 ), ExtResource( 74 ), ExtResource( 46 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 69 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 67 ), ExtResource( 50 ), ExtResource( 75 ), ExtResource( 63 ), ExtResource( 56 ), ExtResource( 54 ), ExtResource( 66 ), ExtResource( 57 ), ExtResource( 49 ), ExtResource( 58 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 65 ), ExtResource( 73 ), ExtResource( 61 ), ExtResource( 71 ), ExtResource( 68 ), ExtResource( 62 ) ],
-"loop": true,
-"name": "high",
-"speed": 30.0
-}, {
 "frames": [ ExtResource( 83 ), ExtResource( 86 ), ExtResource( 109 ), ExtResource( 93 ), ExtResource( 76 ), ExtResource( 103 ), ExtResource( 106 ), ExtResource( 95 ), ExtResource( 104 ), ExtResource( 101 ), ExtResource( 80 ), ExtResource( 99 ), ExtResource( 92 ), ExtResource( 81 ), ExtResource( 91 ), ExtResource( 110 ), ExtResource( 84 ), ExtResource( 96 ), ExtResource( 82 ), ExtResource( 97 ), ExtResource( 113 ), ExtResource( 85 ), ExtResource( 94 ), ExtResource( 105 ), ExtResource( 100 ), ExtResource( 107 ), ExtResource( 102 ), ExtResource( 98 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 108 ), ExtResource( 89 ), ExtResource( 111 ), ExtResource( 79 ), ExtResource( 90 ), ExtResource( 112 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 123 ), ExtResource( 126 ), ExtResource( 125 ) ],
 "loop": true,
 "name": "low",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 114 ), ExtResource( 120 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 121 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 122 ), ExtResource( 124 ), ExtResource( 70 ), ExtResource( 55 ), ExtResource( 64 ), ExtResource( 72 ), ExtResource( 74 ), ExtResource( 46 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 69 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 67 ), ExtResource( 50 ), ExtResource( 75 ), ExtResource( 63 ), ExtResource( 56 ), ExtResource( 54 ), ExtResource( 66 ), ExtResource( 57 ), ExtResource( 49 ), ExtResource( 58 ), ExtResource( 45 ), ExtResource( 51 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 65 ), ExtResource( 73 ), ExtResource( 61 ), ExtResource( 71 ), ExtResource( 68 ), ExtResource( 62 ) ],
+"loop": true,
+"name": "high",
 "speed": 30.0
 } ]
 
@@ -149,8 +148,7 @@ extents = Vector2( 268.5, 117.612 )
 
 [sub_resource type="Animation" id=4]
 resource_name = "0"
-length = 1.6
-loop = true
+length = 1.65
 step = 0.033
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
@@ -195,7 +193,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.924, 1.254 ),
+"times": PoolRealArray( 0.924, 1.155 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -296,9 +294,8 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=7]
 resource_name = "0"
-length = 1.6
-loop = true
-step = 0.033
+length = 1.66667
+step = 0.0333333
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
 tracks/0/interp = 1
@@ -342,7 +339,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.924, 1.254 ),
+"times": PoolRealArray( 0.924, 1.155 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -443,8 +440,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=10]
 resource_name = "0"
-length = 1.6
-loop = true
+length = 1.65
 step = 0.033
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
@@ -489,7 +485,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.924, 1.254 ),
+"times": PoolRealArray( 0.924, 1.155 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -594,12 +590,6 @@ __meta__ = {
 "_edit_horizontal_guides_": [  ]
 }
 
-[node name="guide" type="Sprite" parent="."]
-visible = false
-position = Vector2( 960, 540 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 2 )
-
 [node name="anim" type="AnimationPlayer" parent="."]
 anims/all_random = SubResource( 1 )
 
@@ -608,7 +598,6 @@ position = Vector2( 459.896, 735.405 )
 scale = Vector2( 0.474, 0.35 )
 frames = SubResource( 2 )
 animation = "low"
-frame = 1
 __meta__ = {
 "_edit_group_": true
 }
@@ -631,7 +620,6 @@ position = Vector2( 986.996, 727.076 )
 scale = Vector2( 0.474, 0.35 )
 frames = SubResource( 2 )
 animation = "low"
-frame = 1
 __meta__ = {
 "_edit_group_": true
 }
@@ -654,7 +642,6 @@ position = Vector2( 1496.3, 722.915 )
 scale = Vector2( 0.474, 0.35 )
 frames = SubResource( 2 )
 animation = "low"
-frame = 1
 __meta__ = {
 "_edit_group_": true
 }
