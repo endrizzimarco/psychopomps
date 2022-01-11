@@ -606,15 +606,15 @@ animations = [ {
 "name": "idle",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "change_side",
-"speed": 30.0
-}, {
 "frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
 "name": "rain_atk",
 "speed": 7.01
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "change_side",
+"speed": 30.0
 } ]
 
 [sub_resource type="SpriteFrames" id=10]
@@ -657,7 +657,7 @@ position = Vector2( 553.037, -481.91 )
 scale = Vector2( 1.07733, 1.05549 )
 frames = SubResource( 7 )
 animation = "reflection"
-frame = 11
+frame = 6
 playing = true
 
 [node name="boss" type="KinematicBody2D" parent="."]
@@ -675,13 +675,14 @@ scale = Vector2( 0.795092, 0.784421 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boss/hurtbox"]
 position = Vector2( 1367.6, 339.874 )
 shape = SubResource( 8 )
+disabled = true
 
 [node name="body" type="AnimatedSprite" parent="boss"]
 position = Vector2( 943.117, 405.062 )
 scale = Vector2( 0.552226, 0.556352 )
 frames = SubResource( 9 )
 animation = "idle"
-frame = 46
+frame = 1
 playing = true
 
 [node name="head" type="Sprite" parent="boss/body"]
@@ -698,5 +699,5 @@ scale = Vector2( 1.01966, 0.848434 )
 z_index = -1
 frames = SubResource( 10 )
 animation = "ripple"
-frame = 8
+frame = 10
 playing = true

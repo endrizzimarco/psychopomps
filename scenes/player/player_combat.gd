@@ -9,6 +9,9 @@ enum Position {LEFT=700, CENTER=1250, RIGHT=1800}
 var pos_cur = Position.CENTER
 var dash_dir : String
 
+var is_invulnerable := false
+var invulnerable_timer := 0.0
+
 onready var animations = $animations
 
 
@@ -29,6 +32,11 @@ func _physics_process(delta):
 	if anim_cur != anim_nxt:
 		anim_cur = anim_nxt
 		$animations.play(anim_cur)
+	
+	if is_invulnerable:
+		invulnerable_timer -= delta
+		if invulnerable_timer <= 0:
+			is_invulnerable = false
 
 
 func can_dodge() -> bool:
@@ -42,5 +50,10 @@ func can_dodge() -> bool:
 
 
 func _on_hurtbox_area_entered(_area):
-	if fsm.state_nxt == fsm.states.idle:
-		fsm.state_nxt = fsm.states.hit
+	if not is_invulnerable:
+		if $animations.current_animation == "idle":
+			anim_nxt = "idle"
+		$states/hit/fx.play("hit")
+		$states/hit/AudioStreamPlayer.play() 
+		is_invulnerable = true
+		invulnerable_timer = 0.3
