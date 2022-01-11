@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_crouch_dash_right_scratch0002.png-f3bba45e206e4a2e38411f038c07b92f.stex"
+path="res://.import/spritesheet (7).png-18ad9a7afc6bfa8c90c6641da75f9b30.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/player_crouch/dash_right/scratch/player_crouch_dash_right_scratch0002.png"
-dest_files=[ "res://.import/player_crouch_dash_right_scratch0002.png-f3bba45e206e4a2e38411f038c07b92f.stex" ]
+source_file="res://assets/player/spritesheet (7).png"
+dest_files=[ "res://.import/spritesheet (7).png-18ad9a7afc6bfa8c90c6641da75f9b30.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true
