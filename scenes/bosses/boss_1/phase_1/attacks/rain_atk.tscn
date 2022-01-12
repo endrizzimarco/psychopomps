@@ -265,6 +265,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ 0.0, 180.0, 360.0, 540.0, 720.0 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=31]
 resource_name = "goblet_up"
@@ -304,6 +316,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 540, 412.445 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=32]
@@ -357,6 +381,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ 0.0, 180.0, 360.0, 540.0, 720.0 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=33]
 resource_name = "goblet_up"
@@ -396,6 +432,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 980, 412.445 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=34]
@@ -449,6 +497,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ 0.0, 180.0, 360.0, 540.0, 720.0 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=35]
 resource_name = "goblet_up"
@@ -488,6 +548,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1380, 412.445 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("hitbox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [node name="rain_atk" type="Node2D"]
@@ -534,10 +606,10 @@ __meta__ = {
 }
 
 [node name="hitbox" type="Area2D" parent="goblet_center"]
-visible = false
 position = Vector2( 42, 312 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="goblet_center/hitbox"]
+visible = false
 position = Vector2( -40.4112, -317.326 )
 shape = SubResource( 29 )
 
