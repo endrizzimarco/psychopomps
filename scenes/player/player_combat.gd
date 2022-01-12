@@ -9,6 +9,7 @@ enum Position {LEFT=700, CENTER=1250, RIGHT=1800}
 var pos_cur = Position.CENTER
 var dash_dir : String
 
+export var health = 6
 var is_invulnerable := false
 var invulnerable_timer := 0.0
 
@@ -51,9 +52,43 @@ func can_dodge() -> bool:
 
 func _on_hurtbox_area_entered(_area):
 	if not is_invulnerable:
+		health -= 1
+		_update_hearts()
 		if $animations.current_animation == "idle":
-			anim_nxt = "idle"
+			anim_nxt = "hit"
 		$states/hit/fx.play("hit")
 		$states/hit/AudioStreamPlayer.play() 
 		is_invulnerable = true
 		invulnerable_timer = 0.3
+		
+func _update_hearts():
+	match health:
+		0:
+			$energy/heart_1.set_frame(2)
+			$energy/heart_2.set_frame(2)
+			$energy/heart_3.set_frame(2)
+			print("you're dead")
+		1:
+			$energy/heart_1.set_frame(1)
+			$energy/heart_2.set_frame(2)
+			$energy/heart_3.set_frame(2)
+		2:
+			$energy/heart_1.set_frame(0)
+			$energy/heart_2.set_frame(2)
+			$energy/heart_3.set_frame(2)
+		3:
+			$energy/heart_1.set_frame(0)
+			$energy/heart_2.set_frame(1)
+			$energy/heart_3.set_frame(2)
+		4:
+			$energy/heart_1.set_frame(0)
+			$energy/heart_2.set_frame(0)
+			$energy/heart_3.set_frame(2)
+		5:
+			$energy/heart_1.set_frame(0)
+			$energy/heart_2.set_frame(0)
+			$energy/heart_3.set_frame(1)
+		6:
+			$energy/heart_1.set_frame(0)
+			$energy/heart_2.set_frame(0)
+			$energy/heart_3.set_frame(0)

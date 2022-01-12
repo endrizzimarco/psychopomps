@@ -5,6 +5,7 @@
 [ext_resource path="res://scenes/player/player_combat.gd" type="Script" id=3]
 [ext_resource path="res://scenes/player/states/idle.gd" type="Script" id=4]
 [ext_resource path="res://scenes/player/states/dodge.gd" type="Script" id=5]
+[ext_resource path="res://assets/player/heart.png" type="Texture" id=6]
 [ext_resource path="res://scenes/player/states/crouch.gd" type="Script" id=7]
 [ext_resource path="res://scenes/player/states/jump.gd" type="Script" id=8]
 [ext_resource path="res://assets/player/Playersmall aligned plus crouch.png" type="Texture" id=40]
@@ -12,7 +13,6 @@
 [ext_resource path="res://scenes/player/states/light_atk.gd" type="Script" id=195]
 [ext_resource path="res://scenes/player/states/heavy_atk.gd" type="Script" id=196]
 [ext_resource path="res://scenes/player/hit.gd" type="Script" id=197]
-[ext_resource path="res://guide.png" type="Texture" id=205]
 
 [sub_resource type="AtlasTexture" id=78]
 flags = 4
@@ -1032,12 +1032,6 @@ tracks/0/keys = {
 position = Vector2( 1252.52, 1100 )
 script = ExtResource( 3 )
 
-[node name="guide" type="Sprite" parent="."]
-visible = false
-position = Vector2( -291.694, -560.226 )
-scale = Vector2( 0.499889, 0.497194 )
-texture = ExtResource( 205 )
-
 [node name="player_sprites" type="AnimatedSprite" parent="."]
 position = Vector2( -2314.97, -1581.78 )
 frames = SubResource( 1 )
@@ -1114,5 +1108,25 @@ anims/hit = SubResource( 99 )
 
 [node name="dead" type="Node" parent="states"]
 script = ExtResource( 2 )
+
+[node name="energy" type="CanvasLayer" parent="."]
+
+[node name="heart_1" type="Sprite" parent="energy"]
+position = Vector2( 82.6859, 73.8785 )
+scale = Vector2( 0.774971, 0.733233 )
+texture = ExtResource( 6 )
+hframes = 3
+
+[node name="heart_2" type="Sprite" parent="energy"]
+position = Vector2( 183.072, 73.8787 )
+scale = Vector2( 0.774971, 0.733233 )
+texture = ExtResource( 6 )
+hframes = 3
+
+[node name="heart_3" type="Sprite" parent="energy"]
+position = Vector2( 283.459, 75.3767 )
+scale = Vector2( 0.774971, 0.733233 )
+texture = ExtResource( 6 )
+hframes = 3
 
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
