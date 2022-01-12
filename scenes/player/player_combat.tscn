@@ -8,14 +8,14 @@
 [ext_resource path="res://assets/player/heart.png" type="Texture" id=6]
 [ext_resource path="res://scenes/player/states/crouch.gd" type="Script" id=7]
 [ext_resource path="res://scenes/player/states/jump.gd" type="Script" id=8]
-[ext_resource path="res://scenes/player/dead.gd" type="Script" id=9]
+[ext_resource path="res://scenes/player/states/dead.gd" type="Script" id=9]
 [ext_resource path="res://assets/player/E_HXiZqX0Ac2UyZ.jpg" type="Texture" id=10]
 [ext_resource path="res://assets/player/2-66 Champion Shirona.mp3" type="AudioStream" id=11]
 [ext_resource path="res://assets/player/Playersmall aligned plus crouch.png" type="Texture" id=40]
-[ext_resource path="res://scenes/player/sfx/scratches.tscn" type="PackedScene" id=141]
+[ext_resource path="res://scenes/player/fx/scratches.tscn" type="PackedScene" id=141]
 [ext_resource path="res://scenes/player/states/light_atk.gd" type="Script" id=195]
 [ext_resource path="res://scenes/player/states/heavy_atk.gd" type="Script" id=196]
-[ext_resource path="res://scenes/player/hit.gd" type="Script" id=197]
+[ext_resource path="res://scenes/player/states/hit.gd" type="Script" id=197]
 
 [sub_resource type="AtlasTexture" id=78]
 flags = 4
@@ -76,56 +76,6 @@ region = Rect2( 4030, 5004, 806, 834 )
 flags = 4
 atlas = ExtResource( 40 )
 region = Rect2( 4836, 5004, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=16]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 4836, 834, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=90]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 8060, 0, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=91]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 8866, 0, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=92]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 9672, 0, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=93]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 0, 834, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=94]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 806, 834, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=95]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 1612, 834, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=96]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 2418, 834, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=97]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 3224, 834, 806, 834 )
-
-[sub_resource type="AtlasTexture" id=98]
-flags = 4
-atlas = ExtResource( 40 )
-region = Rect2( 4030, 834, 806, 834 )
 
 [sub_resource type="AtlasTexture" id=69]
 flags = 4
@@ -206,6 +156,56 @@ region = Rect2( 6448, 0, 806, 834 )
 flags = 4
 atlas = ExtResource( 40 )
 region = Rect2( 7254, 0, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=90]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 8060, 0, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=91]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 8866, 0, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=92]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 9672, 0, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=93]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 0, 834, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=94]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 806, 834, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=95]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 1612, 834, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=96]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 2418, 834, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=97]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 3224, 834, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=98]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 4030, 834, 806, 834 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 40 )
+region = Rect2( 4836, 834, 806, 834 )
 
 [sub_resource type="AtlasTexture" id=75]
 flags = 4
@@ -434,16 +434,6 @@ animations = [ {
 "name": "idle",
 "speed": 30.0
 }, {
-"frames": [ SubResource( 16 ) ],
-"loop": false,
-"name": "crouch",
-"speed": 30.0
-}, {
-"frames": [ SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ) ],
-"loop": false,
-"name": "light_atk",
-"speed": 60.0
-}, {
 "frames": [ SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ) ],
 "loop": false,
 "name": "jump",
@@ -452,6 +442,16 @@ animations = [ {
 "frames": [ SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ) ],
 "loop": false,
 "name": "heavy_atk",
+"speed": 30.0
+}, {
+"frames": [ SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 96 ), SubResource( 97 ), SubResource( 98 ) ],
+"loop": false,
+"name": "light_atk",
+"speed": 60.0
+}, {
+"frames": [ SubResource( 16 ) ],
+"loop": false,
+"name": "crouch",
 "speed": 30.0
 }, {
 "frames": [ SubResource( 75 ), SubResource( 76 ), SubResource( 77 ) ],
