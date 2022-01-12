@@ -1,5 +1,5 @@
 extends FSM_State
-	
+
 func initialize() -> void:
 	var	pos_cur = obj.pos_cur
 	var pos_nxt
@@ -14,13 +14,17 @@ func initialize() -> void:
 		obj.anim_nxt = "crouch_dash_right" if Input.is_action_pressed("btn_down") else "dash_right"
 
 	pos_nxt = obj.pos_cur
-	$Tween.interpolate_property(obj, "position:x", pos_cur, pos_nxt, 0.1, Tween.TRANS_LINEAR, Tween.EASE_OUT)
+	$Tween.interpolate_property(obj, "position:x", pos_cur, pos_nxt, 0.08, Tween.TRANS_LINEAR)
 	$Tween.start()
 
 
 func run(_delta) -> void:
-	# When finished dashing set state back to idle/crouch-idle
+	# When finished dashing, set state back to idle/crouch-idle
 	if not $Tween.is_active():
+		if obj.jumped_mid_dash: 
+			fsm.state_nxt = fsm.states.jump
+			return
+
 		if Input.is_action_pressed("btn_down"):
 			fsm.state_nxt = fsm.states.crouch
 		else:
@@ -30,7 +34,11 @@ func run(_delta) -> void:
 	if Input.is_action_just_pressed("btn_right") or \
 		Input.is_action_just_pressed("btn_left"):
 		obj.dash_dir = "right" if Input.is_action_just_pressed("btn_right") else "left"
-		
+	
 		if obj.can_dodge():
 			self.initialize()
 	
+	# If jump pressed mid-dash 
+	if Input.is_action_just_pressed("btn_up"):
+		obj.jumped_mid_dash = true
+

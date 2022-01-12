@@ -757,7 +757,6 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=9]
 length = 0.3
-loop = true
 step = 0.0333333
 tracks/0/type = "value"
 tracks/0/path = NodePath("player_sprites:animation")

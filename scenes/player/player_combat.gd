@@ -8,6 +8,8 @@ var anim_nxt = "idle"
 enum Position {LEFT=700, CENTER=1250, RIGHT=1800}
 var pos_cur = Position.CENTER
 var dash_dir : String
+var same_frame_flag : bool = false
+var jumped_mid_dash : bool = false
 
 export var health = 6
 var is_invulnerable := false
