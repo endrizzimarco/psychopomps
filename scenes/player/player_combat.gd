@@ -55,11 +55,13 @@ func _on_hurtbox_area_entered(_area):
 		health -= 1
 		_update_hearts()
 		if $animations.current_animation == "idle":
-			anim_nxt = "hit"
+			$animations.play("idle")
+			$animations.queue("idle")
 		$states/hit/fx.play("hit")
 		$states/hit/AudioStreamPlayer.play() 
 		is_invulnerable = true
 		invulnerable_timer = 0.3
+
 		
 func _update_hearts():
 	match health:
@@ -67,7 +69,7 @@ func _update_hearts():
 			$energy/heart_1.set_frame(2)
 			$energy/heart_2.set_frame(2)
 			$energy/heart_3.set_frame(2)
-			print("you're dead")
+			fsm.state_nxt = fsm.states.dead
 		1:
 			$energy/heart_1.set_frame(1)
 			$energy/heart_2.set_frame(2)
