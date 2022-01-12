@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heart.png-b6b316c5a2e72b8536126f76c78b8f04.stex"
+path="res://.import/d1cjrgx-3581ba4f-aec8-4000-8838-51a4a86195eb.png-064d0626fb5d6f816d9552e7dd5fc535.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/heart.png"
-dest_files=[ "res://.import/heart.png-b6b316c5a2e72b8536126f76c78b8f04.stex" ]
+source_file="res://assets/Fake_RPG/d1cjrgx-3581ba4f-aec8-4000-8838-51a4a86195eb.png"
+dest_files=[ "res://.import/d1cjrgx-3581ba4f-aec8-4000-8838-51a4a86195eb.png-064d0626fb5d6f816d9552e7dd5fc535.stex" ]
 
 [params]
 

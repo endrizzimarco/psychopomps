@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/Fake RPG intro/Door.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Fake RPG intro/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Fake_RPG/placeholder bg.png" type="Texture" id=3]
+[ext_resource path="res://scenes/Fake RPG intro/Interactable thing.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24, 64 )
+
+[node name="Fake_RPG" type="Node2D"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1016, 704 )
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+drag_margin_left = 0.1
+drag_margin_top = 0.1
+drag_margin_right = 0.1
+drag_margin_bottom = 0.1
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="walls" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="Room" type="Sprite" parent="walls"]
+position = Vector2( 960, 540 )
+scale = Vector2( 6, 6.79245 )
+z_index = -10
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls"]
+polygon = PoolVector2Array( 432, 600, 16, 1056, 2040, 1064, 2008, 1216, -40, 1144, -8.71161, 1.97429, -8, -24, 1928, -16, 2032, 1048, 1912, 1080, 1777.68, 925.323, 1648, 776, 1488, 784, 1384, 672, 1560, 664, 1504, 592, 1420.46, 589.984, 1376, 536, 944, 536, 944, 584, 680, 584, 656, 608 )
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1016, 704 )
+collision_layer = 3
+collision_mask = 3
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Node2D"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Door" type="Area2D" parent="."]
+position = Vector2( 304, 736 )
+rotation = 0.675442
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+shape = SubResource( 1 )
+
+[node name="Interactable thing" parent="." instance=ExtResource( 4 )]
+position = Vector2( 800, 848 )
+
+[node name="Interactable thing2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1520, 704 )
+
+[connection signal="body_entered" from="Door" to="Door" method="_on_Door_body_entered"]
