@@ -16,6 +16,7 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1016, 704 )
 current = true
+zoom = Vector2( 2, 2 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
@@ -38,6 +39,7 @@ z_index = -10
 texture = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls"]
+visible = false
 polygon = PoolVector2Array( 432, 600, 16, 1056, 2040, 1064, 2008, 1216, -40, 1144, -8.71161, 1.97429, -8, -24, 1928, -16, 2032, 1048, 1912, 1080, 1777.68, 925.323, 1648, 776, 1488, 784, 1384, 672, 1560, 664, 1504, 592, 1420.46, 589.984, 1376, 536, 944, 536, 944, 584, 680, 584, 656, 608 )
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
