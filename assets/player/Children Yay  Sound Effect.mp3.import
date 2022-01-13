@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Children Yay  Sound Effect.mp3-5f371fcb4a98f2528ffe504646ba9d63.mp3str"
+
+[deps]
+
+source_file="res://assets/player/Children Yay  Sound Effect.mp3"
+dest_files=[ "res://.import/Children Yay  Sound Effect.mp3-5f371fcb4a98f2528ffe504646ba9d63.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -7,6 +7,7 @@ func initialize() -> void:
 
 func run(_delta) -> void:
 	if Input.is_action_just_pressed("btn_enter"):
+		$'../../../phase_1'.boss_health = 200
 		$AudioStreamPlayer.stop()
 		$AudioStreamPlayer2.play()
 		$Sprite.hide()

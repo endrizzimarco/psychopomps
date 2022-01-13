@@ -1,11 +1,22 @@
 extends Node
 
+export var boss_health = 200
 var curr_side = "right"
 # Called when the node enters the scene tree for the first time.
+
+
 func _ready():
 	$atk_master.play("pattern_1")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
+	
+	
+func _process(delta):
+	print(boss_health)
+	if boss_health <= 0:
+		$AudioStreamPlayer.play()
+		$Sprite.show()
+		$boss.queue_free()
+		
+		
 
 func _spike_attack():
 	var spike = preload("res://scenes/bosses/boss_1/phase_1/attacks/spike_atk.tscn").instance()
@@ -35,3 +46,13 @@ func _change_side():
 	else:
 		curr_side = "right"
 		$atk_anim.play_backwards("change_side")
+
+
+func _on_hurtbox_area_entered(area):
+	match area.name:
+		"light_atk":
+			boss_health -= 1
+			$boss/fx.play("hit")
+		"heavy_atk":
+			boss_health -= 7
+			$boss/fx.play("hit")
