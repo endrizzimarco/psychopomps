@@ -7,7 +7,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "goblet_down"
-length = 1.6
+length = 2.4
 tracks/0/type = "animation"
 tracks/0/path = NodePath("goblet_left/anim_left")
 tracks/0/interp = 1
@@ -216,7 +216,8 @@ extents = Vector2( 95.8038, 114.31 )
 
 [sub_resource type="Animation" id=30]
 resource_name = "goblet_down"
-length = 1.6
+length = 2.4
+step = 0.0333333
 tracks/0/type = "value"
 tracks/0/path = NodePath("anim_left:playback_speed")
 tracks/0/interp = 1
@@ -248,7 +249,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1.6 ),
+"times": PoolRealArray( 0, 2.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 526, -79.297 ), Vector2( 526, 1200 ) ]
@@ -260,7 +261,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6 ),
+"times": PoolRealArray( 0, 0.6, 1.2, 1.8, 2.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 180.0, 360.0, 540.0, 720.0 ]
@@ -332,7 +333,8 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=32]
 resource_name = "goblet_down"
-length = 1.6
+length = 2.4
+step = 0.0333333
 tracks/0/type = "value"
 tracks/0/path = NodePath("anim_center:playback_speed")
 tracks/0/interp = 1
@@ -364,7 +366,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1.6 ),
+"times": PoolRealArray( 0, 2.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 960, -79.297 ), Vector2( 960, 1200 ) ]
@@ -376,7 +378,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6 ),
+"times": PoolRealArray( 0, 0.6, 1.2, 1.8, 2.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 180.0, 360.0, 540.0, 720.0 ]
@@ -448,7 +450,8 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=34]
 resource_name = "goblet_down"
-length = 1.6
+length = 2.4
+step = 0.0333333
 tracks/0/type = "value"
 tracks/0/path = NodePath("anim_right:playback_speed")
 tracks/0/interp = 1
@@ -480,7 +483,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1.6 ),
+"times": PoolRealArray( 0, 2.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1380, -79.297 ), Vector2( 1380, 1200 ) ]
@@ -492,7 +495,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6 ),
+"times": PoolRealArray( 0, 0.6, 1.2, 1.8, 2.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 180.0, 360.0, 540.0, 720.0 ]
@@ -574,11 +577,12 @@ anims/goblet_down = SubResource( 1 )
 anims/goblet_up = SubResource( 2 )
 
 [node name="goblet_left" type="AnimatedSprite" parent="."]
-position = Vector2( 526, 1200 )
+position = Vector2( 540, 412.445 )
 rotation = 12.5664
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 28 )
-animation = "goblet"
+animation = "up"
+frame = 25
 __meta__ = {
 "_edit_group_": true
 }
@@ -590,17 +594,19 @@ position = Vector2( 42, 312 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="goblet_left/hitbox"]
 position = Vector2( -40.4112, -317.326 )
 shape = SubResource( 29 )
+disabled = true
 
 [node name="anim_left" type="AnimationPlayer" parent="goblet_left"]
 anims/goblet_down = SubResource( 30 )
 anims/goblet_up = SubResource( 31 )
 
 [node name="goblet_center" type="AnimatedSprite" parent="."]
-position = Vector2( 960, 1200 )
+position = Vector2( 980, 412.445 )
 rotation = 12.5664
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 28 )
-animation = "goblet"
+animation = "up"
+frame = 25
 __meta__ = {
 "_edit_group_": true
 }
@@ -612,17 +618,19 @@ position = Vector2( 42, 312 )
 visible = false
 position = Vector2( -40.4112, -317.326 )
 shape = SubResource( 29 )
+disabled = true
 
 [node name="anim_center" type="AnimationPlayer" parent="goblet_center"]
 anims/goblet_down = SubResource( 32 )
 anims/goblet_up = SubResource( 33 )
 
 [node name="goblet_right" type="AnimatedSprite" parent="."]
-position = Vector2( 1380, 1200 )
+position = Vector2( 1380, 412.445 )
 rotation = 12.5664
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 28 )
-animation = "goblet"
+animation = "up"
+frame = 25
 __meta__ = {
 "_edit_group_": true
 }
@@ -634,6 +642,7 @@ position = Vector2( 42, 312 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="goblet_right/hitbox"]
 position = Vector2( -40.4112, -317.326 )
 shape = SubResource( 29 )
+disabled = true
 
 [node name="anim_right" type="AnimationPlayer" parent="goblet_right"]
 anims/goblet_down = SubResource( 34 )
