@@ -19,6 +19,7 @@ onready var animations = $animations
 
 
 func _ready():
+	$states/dead/AudioStreamPlayer2.play()
 #	cur_params = parameters[gamestate.state.current_player_status
 #	game.player = self
 #	var _ret = gamestate.connect( "gamestate_changed", self, "set_attack_reach", [], Object.CONNECT_DEFERRED )

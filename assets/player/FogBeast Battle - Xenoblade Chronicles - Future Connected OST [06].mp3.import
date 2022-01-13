@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FogBeast Battle - Xenoblade Chronicles - Future Connected OST [06].mp3-f54345f5cb7e7658a5d9330f5a52d908.mp3str"
+
+[deps]
+
+source_file="res://assets/player/FogBeast Battle - Xenoblade Chronicles - Future Connected OST [06].mp3"
+dest_files=[ "res://.import/FogBeast Battle - Xenoblade Chronicles - Future Connected OST [06].mp3-f54345f5cb7e7658a5d9330f5a52d908.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

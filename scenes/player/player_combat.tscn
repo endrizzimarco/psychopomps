@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=2]
+[gd_scene load_steps=116 format=2]
 
 [ext_resource path="res://assets/player/hit.mp3" type="AudioStream" id=1]
 [ext_resource path="res://scripts/state.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scenes/player/states/dead.gd" type="Script" id=9]
 [ext_resource path="res://assets/player/E_HXiZqX0Ac2UyZ.jpg" type="Texture" id=10]
 [ext_resource path="res://assets/player/2-66 Champion Shirona.mp3" type="AudioStream" id=11]
+[ext_resource path="res://assets/player/FogBeast Battle - Xenoblade Chronicles - Future Connected OST [06].mp3" type="AudioStream" id=12]
 [ext_resource path="res://assets/player/Playersmall aligned plus crouch.png" type="Texture" id=40]
 [ext_resource path="res://scenes/player/fx/scratches.tscn" type="PackedScene" id=141]
 [ext_resource path="res://scenes/player/states/light_atk.gd" type="Script" id=195]
@@ -1118,6 +1119,9 @@ texture = ExtResource( 10 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="states/dead"]
 stream = ExtResource( 11 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="states/dead"]
+stream = ExtResource( 12 )
 
 [node name="energy" type="CanvasLayer" parent="."]
 
