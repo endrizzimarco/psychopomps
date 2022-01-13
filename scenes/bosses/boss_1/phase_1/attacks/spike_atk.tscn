@@ -149,7 +149,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 268.5, 705.25 )
+extents = Vector2( 211.455, 707.279 )
 
 [sub_resource type="Animation" id=6]
 resource_name = "spike_left"
