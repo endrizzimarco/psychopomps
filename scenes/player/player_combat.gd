@@ -54,11 +54,11 @@ func can_dodge() -> bool:
 
 
 func _on_hurtbox_area_entered(_area):
-	if not is_invulnerable:
+	if not is_invulnerable and _area.name == "hitbox":
 		health -= 1
 		_update_hearts()
 		if $animations.current_animation == "idle":
-			$animations.play("idle")
+			$animations.play("hit")
 			$animations.queue("idle")
 		$states/hit/fx.play("hit")
 		$states/hit/AudioStreamPlayer.play() 
