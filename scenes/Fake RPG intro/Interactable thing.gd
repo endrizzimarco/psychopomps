@@ -1,6 +1,6 @@
 extends Area2D
 
-onready var textbox = preload("res://scenes/Fake RPG intro/TextBox.tscn")
+onready var textbox = preload("res://scenes/Fake RPG intro/fake rpg textbox.tscn")
 
 
 
