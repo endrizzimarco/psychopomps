@@ -280,7 +280,6 @@ anims/walk_6 = SubResource( 8 )
 anims/walk_7 = SubResource( 12 )
 
 [node name="interact" type="Area2D" parent="."]
-scale = Vector2( 1.5, 1.5 )
 collision_layer = 8
 collision_mask = 8
 
