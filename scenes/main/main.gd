@@ -6,7 +6,7 @@ const MENU_SCN = "res://screens/start_menu/start_menu.tscn"
 
 
 func _ready():
-#	game.main = self
+	game.main = self
 #	if game.debug:
 #		load_gamestate()
 #	else:
@@ -16,8 +16,7 @@ func _ready():
 #	var _ret = gamestate.connect( "gamestate_changed", self, "_on_gamestate_change" )
 
 func _input(event):
-	if event.is_action_pressed( "btn_quit" ) or \
-		event.is_action_pressed( "btn_enter" ):
+	if event.is_action_pressed( "btn_quit" ):
 			pause_game()
 
 #==================================
@@ -60,6 +59,44 @@ func load_screen( scrn := "" ):
 			get_tree().paused = false
 			load_state = 0
 
+#==================================
+# Load GameState
+#==================================
+func load_gamestate() -> void:
+	match load_state:
+		0:
+			print( "LOADING STAGE: ", gamestate.state.current_lvl )
+			get_tree().paused = true
+#			$fade_layer/fadeanim.play( "fade_out" )
+			load_state = 1
+			$loadtimer.set_wait_time( 0.2 )
+			$loadtimer.start()
+		1:
+#			$hud_layer/hud.hide()
+			var children = $levels.get_children()
+			if not children.empty():
+				children[0].queue_free()
+			load_state = 2
+			$loadtimer.set_wait_time( 0.05 )
+			$loadtimer.start()
+		2:
+			var new_level = load( gamestate.state.current_lvl ).instance()
+			$levels.add_child( new_level )
+			get_tree().paused = false
+			
+			load_state = 3
+			$loadtimer.set_wait_time( 0.3 )
+			$loadtimer.start()
+		3:
+#			$fade_layer/fadeanim.play( "fade_in" )
+			load_state = 4
+			$loadtimer.set_wait_time( 0.2 )
+			$loadtimer.start()
+		4:
+			
+			load_state = 0
+
+
 func pause_game():
 	get_tree().paused = true
 	$pause_layer/pause_menu.show()
@@ -67,7 +104,6 @@ func pause_game():
 
 
 func _on_pause_menu_pause_finished( cont ):
-	print(cont)
 	$pause_layer/pause_menu.deactivate()
 	yield( get_tree().create_timer( 0.02 ), "timeout" )
 	
@@ -80,7 +116,8 @@ func _on_pause_menu_pause_finished( cont ):
 #		load_screen( MENU_SCN )
 
 
-
+func _on_loadtimer_timeout():
+	load_gamestate()
 
 func _on_screentimer_timeout():
 	load_screen()

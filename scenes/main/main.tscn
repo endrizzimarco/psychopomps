@@ -23,5 +23,10 @@ visible = false
 process_mode = 0
 one_shot = true
 
+[node name="loadtimer" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
+
 [connection signal="pause_finished" from="pause_layer/pause_menu" to="." method="_on_pause_menu_pause_finished"]
 [connection signal="timeout" from="screentimer" to="." method="_on_screentimer_timeout"]
+[connection signal="timeout" from="loadtimer" to="." method="_on_loadtimer_timeout"]

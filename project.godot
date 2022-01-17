@@ -42,6 +42,11 @@ config/name="Psychopomps"
 run/main_scene="res://scenes/main/main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+game="*res://scripts/game.gd"
+gamestate="*res://scripts/gamestate.gd"
+
 [display]
 
 window/size/width=1920
