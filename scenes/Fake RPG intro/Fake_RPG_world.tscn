@@ -35,13 +35,15 @@ z_index = -10
 texture = ExtResource( 3 )
 
 [node name="walls" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls"]
 visible = false
 polygon = PoolVector2Array( 432, 600, 16, 1056, 2040, 1064, 2008, 1216, -40, 1144, -8.71161, 1.97429, -8, -24, 1928, -16, 2032, 1048, 1912, 1080, 1777.68, 925.323, 1648, 776, 1488, 784, 1384, 672, 1560, 664, 1504, 592, 1420.46, 589.984, 1376, 536, 944, 536, 944, 584, 680, 584, 656, 608 )
 
 [node name="door" type="Area2D" parent="."]
-position = Vector2( 304, 736 )
+position = Vector2( 304, 744 )
 rotation = 0.675442
 script = ExtResource( 1 )
 __meta__ = {
@@ -49,6 +51,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2( -1.40564, -0.155151 )
 shape = SubResource( 1 )
 
 [node name="table" parent="." instance=ExtResource( 4 )]
