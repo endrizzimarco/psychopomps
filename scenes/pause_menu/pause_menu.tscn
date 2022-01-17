@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Fake_RPG/BebasNeue.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/menu_item.gd" type="Script" id=2]
+[ext_resource path="res://scenes/pause_menu/pause_menu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+font_data = ExtResource( 1 )
+
+[node name="pause_menu" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="bg" type="ColorRect" parent="."]
+modulate = Color( 0, 0, 0, 0.541176 )
+margin_left = -53.0
+margin_top = -53.0
+margin_right = 1972.0
+margin_bottom = 1163.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="continue" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="continue"]
+margin_left = 1458.0
+margin_top = 717.392
+margin_right = 1901.0
+margin_bottom = 1080.39
+custom_fonts/font = SubResource( 1 )
+text = "continue
+"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="quit"]
+margin_left = 1458.0
+margin_top = 861.642
+margin_right = 1753.0
+margin_bottom = 1224.64
+custom_fonts/font = SubResource( 1 )
+text = "quit
+"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

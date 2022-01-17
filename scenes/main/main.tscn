@@ -1,11 +1,27 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/main/main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/pause_menu/pause_menu.tscn" type="PackedScene" id=2]
 
 [node name="main" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 1 )
 
 [node name="levels" type="Node2D" parent="."]
+pause_mode = 1
 
 [node name="text_layer" type="CanvasLayer" parent="."]
 
 [node name="hud_layer" type="CanvasLayer" parent="."]
 
-[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+[node name="pause_layer" type="CanvasLayer" parent="."]
+
+[node name="pause_menu" parent="pause_layer" instance=ExtResource( 2 )]
+visible = false
+
+[node name="screentimer" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
+
+[connection signal="pause_finished" from="pause_layer/pause_menu" to="." method="_on_pause_menu_pause_finished"]
+[connection signal="timeout" from="screentimer" to="." method="_on_screentimer_timeout"]
